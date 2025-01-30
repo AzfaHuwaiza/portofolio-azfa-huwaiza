@@ -1,0 +1,18 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(78, 78, 78);
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
