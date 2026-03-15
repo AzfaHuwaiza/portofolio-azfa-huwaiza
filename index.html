@@ -149,10 +149,6 @@
                 src="img/azfa.png"
                 alt="Azfa Huwaiza"
                 class="relative w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-full ring-8 ring-white shadow-xl mx-auto"
-                onerror="
-                  this.src =
-                    'https://ui-avatars.com/api/?name=Azfa+Huwaiza&background=0ea5e9&color=fff&size=512'
-                "
               />
             </div>
           </div>
@@ -735,110 +731,375 @@
 
     <!-- Portfolio Section Start -->
 
-    <section id="portfolio" class="py-20 lg:py-32 bg-white">
+    <section
+      id="portfolio"
+      class="py-20 lg:py-32 bg-white relative overflow-hidden"
+    >
       <div class="max-w-screen-xl mx-auto px-6">
         <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-800 mb-12">
           Latest <span class="text-sky-600">Project</span>
         </h2>
 
-        <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-          <!-- Left Content -->
-          <div class="w-full lg:w-1/2 space-y-6">
-            <div class="relative">
-              <!-- Watermark Style Number -->
-              <h2
-                class="text-8xl md:text-[9rem] font-black text-slate-100 absolute -top-12 md:-top-16 -left-4 md:-left-6 z-0 pointer-events-none select-none"
-              >
-                01
-              </h2>
-              <h3 class="text-3xl font-bold text-slate-800 relative z-10 pt-4">
-                Plastic Shop
-              </h3>
-            </div>
+        <!-- Slider Container -->
+        <div id="project-slider" class="relative">
+          <!-- ================= SLIDE 1 ================= -->
+          <div
+            class="project-slide flex flex-col lg:flex-row items-center gap-10 lg:gap-16 animate-fade-in"
+            id="slide-0"
+          >
+            <!-- Left Content -->
+            <div class="w-full lg:w-1/2 space-y-6">
+              <div class="relative">
+                <!-- Watermark Style Number -->
+                <h2
+                  class="text-8xl md:text-[9rem] font-black text-slate-100 absolute -top-12 md:-top-16 -left-4 md:-left-6 z-0 pointer-events-none select-none"
+                >
+                  01
+                </h2>
+                <h3
+                  class="text-3xl font-bold text-slate-800 relative z-10 pt-4"
+                >
+                  Plastic Shop
+                </h3>
+              </div>
 
-            <p class="text-slate-600 leading-relaxed relative z-10">
-              An e-commerce website to develop plastic sales, built using Django
-              as the backend and Bootstrap for frontend styling. This website is
-              designed to facilitate plastic sales transactions with features
-              such as product management, shopping carts, and order processing.
-              As a full stack developer, I handle all aspects of development,
-              from database design, interactive feature implementation, to
-              presenting a responsive and user-friendly interface.
-            </p>
+              <p class="text-slate-600 leading-relaxed relative z-10">
+                An e-commerce website to develop plastic sales, built using
+                Django as the backend and Bootstrap for frontend styling. This
+                website is designed to facilitate plastic sales transactions
+                with features such as product management, shopping carts, and
+                order processing. As a full stack developer, I handle all
+                aspects of development, from database design, interactive
+                feature implementation, to presenting a responsive and
+                user-friendly interface.
+              </p>
 
-            <div class="flex flex-col gap-3 relative z-10">
-              <span
-                class="text-sm font-bold text-slate-400 uppercase tracking-wider"
-                >Tech Stack</span
-              >
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-col gap-3 relative z-10">
                 <span
-                  class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-sky-100"
-                  >Python</span
+                  class="text-sm font-bold text-slate-400 uppercase tracking-wider"
+                  >Tech Stack</span
                 >
-                <span
-                  class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-sky-100"
-                  >Django</span
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-sky-100"
+                    >Python</span
+                  >
+                  <span
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-sky-100"
+                    >Django</span
+                  >
+                  <span
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-sky-100"
+                    >Bootstrap CSS</span
+                  >
+                  <span
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-sky-100"
+                    >MySQL</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex gap-4 pt-4 relative z-10">
+                <a
+                  href="https://github.com/AzfaHuwaiza/ecommerce-plastic-shop"
+                  class="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-sm"
+                  target="_blank"
                 >
-                <span
-                  class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-sky-100"
-                  >Bootstrap CSS</span
-                >
-                <span
-                  class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-sky-100"
-                  >MySQL</span
-                >
+                  <box-icon
+                    type="logo"
+                    name="github"
+                    color="currentColor"
+                  ></box-icon>
+                </a>
               </div>
             </div>
 
-            <div class="flex gap-4 pt-4 relative z-10">
-              <a
-                href="#"
-                class="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-sky-600 hover:text-white hover:border-sky-600 transition-all shadow-sm"
-              >
-                <box-icon name="external-link" color="currentColor"></box-icon>
-              </a>
-              <a
-                href="#"
-                class="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-sm"
-              >
-                <box-icon
-                  type="logo"
-                  name="github"
-                  color="currentColor"
-                ></box-icon>
-              </a>
+            <!-- Right Content (Image) -->
+            <div class="w-full lg:w-1/2 relative group mt-8 lg:mt-0">
+              <!-- Glow background -->
+              <div
+                class="absolute inset-0 bg-sky-200 rounded-2xl blur-xl opacity-50 transform group-hover:scale-105 transition-transform duration-500"
+              ></div>
+              <!-- Image -->
+              <img
+                src="img/project1.png"
+                alt="Project Preview 1"
+                class="relative rounded-2xl shadow-lg border border-slate-200 w-full h-auto object-cover transform group-hover:-translate-y-2 transition-transform duration-500"
+                onerror="
+                  this.src =
+                    'https://placehold.co/800x500/f8fafc/94a3b8?text=Project+Preview+1'
+                "
+              />
             </div>
           </div>
 
-          <!-- Right Content (Image) -->
-          <div class="w-full lg:w-1/2 relative group mt-8 lg:mt-0">
-            <!-- Glow background -->
-            <div
-              class="absolute inset-0 bg-sky-200 rounded-2xl blur-xl opacity-50 transform group-hover:scale-105 transition-transform duration-500"
-            ></div>
+          <!-- ================= SLIDE 2 ================= -->
+          <div
+            class="project-slide hidden flex-col lg:flex-row items-center gap-10 lg:gap-16"
+            id="slide-1"
+          >
+            <!-- Left Content -->
+            <div class="w-full lg:w-1/2 space-y-6">
+              <div class="relative">
+                <!-- Watermark Style Number -->
+                <h2
+                  class="text-8xl md:text-[9rem] font-black text-slate-100 absolute -top-12 md:-top-16 -left-4 md:-left-6 z-0 pointer-events-none select-none"
+                >
+                  02
+                </h2>
+                <h3
+                  class="text-3xl font-bold text-slate-800 relative z-10 pt-4"
+                >
+                  SIAKAD <br />
+                  TK IT Ibadurrohman
+                </h3>
+              </div>
 
-            <!-- Image -->
-            <img
-              src="img/project1.png"
-              alt="Project Preview"
-              class="relative rounded-2xl shadow-lg border border-slate-200 w-full h-auto object-cover transform group-hover:-translate-y-2 transition-transform duration-500"
-              onerror="
-                this.src =
-                  'https://placehold.co/800x500/f8fafc/94a3b8?text=Project+Preview'
-              "
-            />
+              <p class="text-slate-600 leading-relaxed relative z-10">
+                (Isi deskripsi project 02 kamu di sini). An e-commerce website
+                to develop plastic sales, built using Django as the backend and
+                Bootstrap for frontend styling. This website is designed to
+                facilitate plastic sales transactions with features such as
+                product management, shopping carts, and order processing.
+              </p>
+
+              <div class="flex flex-col gap-3 relative z-10">
+                <span
+                  class="text-sm font-bold text-slate-400 uppercase tracking-wider"
+                  >Tech Stack</span
+                >
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1.5 bg-green-50 text-green-600 rounded-lg text-sm font-medium border border-green-100"
+                    >Python</span
+                  >
+                  <span
+                    class="px-3 py-1.5 bg-green-50 text-green-600 rounded-lg text-sm font-medium border border-green-100"
+                    >Django</span
+                  >
+                  <span
+                    class="px-3 py-1.5 bg-green-50 text-green-600 rounded-lg text-sm font-medium border border-green-100"
+                    >Tailwind CSS</span
+                  >
+                  <span
+                    class="px-3 py-1.5 bg-green-50 text-green-600 rounded-lg text-sm font-medium border border-green-100"
+                    >PostgreSQL</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex gap-4 pt-4 relative z-10">
+                <a
+                  href="https://github.com/AzfaHuwaiza/tkit_ibadurrohman"
+                  class="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-sm"
+                  target="_blank"
+                >
+                  <box-icon
+                    type="logo"
+                    name="github"
+                    color="currentColor"
+                  ></box-icon>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Content (Image) -->
+            <div class="w-full lg:w-1/2 relative group mt-8 lg:mt-0">
+              <!-- Glow background -->
+              <div
+                class="absolute inset-0 bg-green-200 rounded-2xl blur-xl opacity-50 transform group-hover:scale-105 transition-transform duration-500"
+              ></div>
+              <!-- Image -->
+              <img
+                src="img/project2.png"
+                alt="Project Preview 2"
+                class="relative rounded-2xl shadow-lg border border-slate-200 w-full h-auto object-cover transform group-hover:-translate-y-2 transition-transform duration-500"
+              />
+            </div>
+          </div>
+
+          <!-- ================= SLIDE 3 ================= -->
+          <div
+            class="project-slide hidden flex-col lg:flex-row items-center gap-10 lg:gap-16"
+            id="slide-3"
+          >
+            <!-- Left Content -->
+            <div class="w-full lg:w-1/2 space-y-6">
+              <div class="relative">
+                <!-- Watermark Style Number -->
+                <h2
+                  class="text-8xl md:text-[9rem] font-black text-slate-100 absolute -top-12 md:-top-16 -left-4 md:-left-6 z-0 pointer-events-none select-none"
+                >
+                  03
+                </h2>
+                <h3
+                  class="text-3xl font-bold text-slate-800 relative z-10 pt-4"
+                >
+                  Web Himpunan Mahasiswa Sistem Informasi - Universitas
+                  Siliwangi
+                </h3>
+              </div>
+
+              <p class="text-slate-600 leading-relaxed relative z-10">
+                (Isi deskripsi project 02 kamu di sini). An e-commerce website
+                to develop plastic sales, built using Django as the backend and
+                Bootstrap for frontend styling. This website is designed to
+                facilitate plastic sales transactions with features such as
+                product management, shopping carts, and order processing.
+              </p>
+
+              <div class="flex flex-col gap-3 relative z-10">
+                <span
+                  class="text-sm font-bold text-slate-400 uppercase tracking-wider"
+                  >Tech Stack</span
+                >
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
+                    >PHP</span
+                  >
+                  <span
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
+                    >Laravel</span
+                  >
+                  <span
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
+                    >Tailwind CSS</span
+                  >
+                  <span
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
+                    >MySQL</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex gap-4 pt-4 relative z-10">
+                <a
+                  href="https://github.com/PramAhmad/hsmi"
+                  class="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-sm"
+                  target="_blank"
+                >
+                  <box-icon
+                    type="logo"
+                    name="github"
+                    color="currentColor"
+                  ></box-icon>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Content (Image) -->
+            <div class="w-full lg:w-1/2 relative group mt-8 lg:mt-0">
+              <!-- Glow background -->
+              <div
+                class="absolute inset-0 bg-sky-200 rounded-2xl blur-xl opacity-50 transform group-hover:scale-105 transition-transform duration-500"
+              ></div>
+              <!-- Image -->
+              <img
+                src="img/project3.png"
+                alt="Project Preview 3"
+                class="relative rounded-2xl shadow-lg border border-slate-200 w-full h-auto object-cover transform group-hover:-translate-y-2 transition-transform duration-500"
+              />
+            </div>
+          </div>
+
+          <!-- ================= SLIDE 4 ================= -->
+          <div
+            class="project-slide hidden flex-col lg:flex-row items-center gap-10 lg:gap-16"
+            id="slide-3"
+          >
+            <!-- Left Content -->
+            <div class="w-full lg:w-1/2 space-y-6">
+              <div class="relative">
+                <!-- Watermark Style Number -->
+                <h2
+                  class="text-8xl md:text-[9rem] font-black text-slate-100 absolute -top-12 md:-top-16 -left-4 md:-left-6 z-0 pointer-events-none select-none"
+                >
+                  04
+                </h2>
+                <h3
+                  class="text-3xl font-bold text-slate-800 relative z-10 pt-4"
+                >
+                  SABUKU (Satu Bulan, Satu Buku) <br />
+                  HMSI - Unsil
+                </h3>
+              </div>
+
+              <p class="text-slate-600 leading-relaxed relative z-10">
+                (Isi deskripsi project 02 kamu di sini). An e-commerce website
+                to develop plastic sales, built using Django as the backend and
+                Bootstrap for frontend styling. This website is designed to
+                facilitate plastic sales transactions with features such as
+                product management, shopping carts, and order processing.
+              </p>
+
+              <div class="flex flex-col gap-3 relative z-10">
+                <span
+                  class="text-sm font-bold text-slate-400 uppercase tracking-wider"
+                  >Tech Stack</span
+                >
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
+                    >Python</span
+                  >
+                  <span
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
+                    >Django</span
+                  >
+                  <span
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
+                    >Tailwind CSS</span
+                  >
+                  <span
+                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
+                    >SQLite</span
+                  >
+                </div>
+              </div>
+
+              <div class="flex gap-4 pt-4 relative z-10">
+                <a
+                  href="https://github.com/AzfaHuwaiza/Sabuku"
+                  class="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-sm"
+                  target="_blank"
+                >
+                  <box-icon
+                    type="logo"
+                    name="github"
+                    color="currentColor"
+                  ></box-icon>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Content (Image) -->
+            <div class="w-full lg:w-1/2 relative group mt-8 lg:mt-0">
+              <!-- Glow background -->
+              <div
+                class="absolute inset-0 bg-sky-200 rounded-2xl blur-xl opacity-50 transform group-hover:scale-105 transition-transform duration-500"
+              ></div>
+              <!-- Image -->
+              <img
+                src="img/project4.png"
+                alt="Project Preview 3"
+                class="relative rounded-2xl shadow-lg border border-slate-200 w-full h-auto object-cover transform group-hover:-translate-y-2 transition-transform duration-500"
+              />
+            </div>
           </div>
         </div>
+        <!-- End Slider Container -->
 
         <!-- Navigation Buttons -->
         <div class="flex justify-start lg:justify-end gap-3 mt-12 lg:mt-16">
           <button
+            onclick="prevProject()"
             class="w-12 h-12 bg-white border border-slate-200 shadow-sm rounded-full hover:border-sky-600 hover:text-sky-600 flex items-center justify-center text-slate-400 transition-all"
           >
             <box-icon name="chevron-left" color="currentColor"></box-icon>
           </button>
           <button
+            onclick="nextProject()"
             class="w-12 h-12 bg-sky-600 shadow-md shadow-sky-600/20 rounded-full hover:bg-sky-700 flex items-center justify-center text-white transition-all"
           >
             <box-icon name="chevron-right" color="currentColor"></box-icon>
@@ -944,8 +1205,9 @@
               </h4>
               <div class="flex gap-4">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/azfahuwaiza/"
                   class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-sky-600 hover:text-white hover:border-sky-600 transition-all shadow-sm hover:-translate-y-1"
+                  target="_blank"
                 >
                   <box-icon
                     type="logo"
@@ -954,8 +1216,9 @@
                   ></box-icon>
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/AzfaHuwaiza/"
                   class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-sm hover:-translate-y-1"
+                  target="_blank"
                 >
                   <box-icon
                     type="logo"
@@ -964,12 +1227,24 @@
                   ></box-icon>
                 </a>
                 <a
-                  href="#"
+                  href="https://instagram.com/azfa.huwaiza"
                   class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-pink-600 hover:text-white hover:border-pink-600 transition-all shadow-sm hover:-translate-y-1"
+                  target="_blank"
                 >
                   <box-icon
                     type="logo"
                     name="instagram"
+                    color="currentColor"
+                  ></box-icon>
+                </a>
+                <a
+                  href="https://tiktok.com/@azfa.huwaiza"
+                  class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-gray-600 hover:text-white hover:border-gray-600 transition-all shadow-sm hover:-translate-y-1"
+                  target="_blank"
+                >
+                  <box-icon
+                    type="logo"
+                    name="tiktok"
                     color="currentColor"
                   ></box-icon>
                 </a>
