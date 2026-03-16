@@ -188,6 +188,12 @@
             </button>
             <button
               class="tab-btn w-full text-left px-6 py-3.5 rounded-xl font-medium transition-all duration-300 bg-white text-slate-600 hover:bg-sky-50 hover:text-sky-600 border border-slate-200"
+              onclick="showContent('experience')"
+            >
+              Experience
+            </button>
+            <button
+              class="tab-btn w-full text-left px-6 py-3.5 rounded-xl font-medium transition-all duration-300 bg-white text-slate-600 hover:bg-sky-50 hover:text-sky-600 border border-slate-200"
               onclick="showContent('certification')"
             >
               Course & Certification
@@ -381,238 +387,829 @@
               </div>
             </div>
 
+            <!-- Experience Content -->
+            <div id="experience" class="tab-content hidden">
+              <h2 class="text-3xl font-bold mb-4 text-slate-800">
+                My <span class="text-sky-600">Experience</span>
+              </h2>
+              <p class="text-slate-600 leading-relaxed mb-8">
+                Berikut adalah perjalanan karier dan pengalaman profesional
+                saya. Saya selalu berusaha untuk memberikan yang terbaik,
+                mengimplementasikan ilmu yang dimiliki, dan terus belajar di
+                setiap kesempatan.
+              </p>
+
+              <!-- Slider Container untuk Experience -->
+              <div id="exp-slider-container" class="relative">
+                <!-- ============ EXP SLIDE 1 (Item 1 & 2) ============ -->
+                <div
+                  class="exp-slide flex flex-col gap-6 animate-fade-in"
+                  id="exp-slide-0"
+                >
+                  <!-- Experience 1: Sakata -->
+                  <div
+                    class="bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <h3 class="text-lg font-bold text-sky-600 mb-4">
+                      Jul 2025 - Sekarang
+                    </h3>
+                    <div class="flex flex-col sm:flex-row items-start gap-5">
+                      <div
+                        class="w-16 h-16 rounded-full bg-white flex items-center justify-center ring-4 ring-slate-50 shrink-0 overflow-hidden shadow-sm"
+                      >
+                        <img
+                          src="https://www.sakattaku.com/images/logo-sakata.png"
+                          alt="Sakata Innovation Center"
+                          class="w-full h-full object-contain p-1"
+                          onerror="
+                            this.src =
+                              'https://ui-avatars.com/api/?name=Sakata&background=f8fafc&color=0ea5e9'
+                          "
+                        />
+                      </div>
+                      <div>
+                        <h2 class="text-xl font-bold text-slate-800">
+                          Sakata Innovation Center
+                        </h2>
+                        <h4 class="text-sky-600 font-semibold mt-1">
+                          Co-Fasilitator (Program Koding & KA)
+                        </h4>
+                        <p class="text-slate-500 mt-2 text-sm leading-relaxed">
+                          Mendampingi pelaksanaan program pembelajaran koding
+                          dan kegiatan pengembangan keterampilan digital bagi
+                          peserta. Berperan dalam membantu fasilitator utama
+                          dalam penyampaian materi, membimbing peserta saat
+                          praktik, serta memastikan proses pembelajaran berjalan
+                          efektif dan interaktif.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Experience 2: HMSI -->
+                  <div
+                    class="bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <h3 class="text-lg font-bold text-sky-600 mb-4">
+                      Mar 2025 - Des 2025
+                    </h3>
+                    <div class="flex flex-col sm:flex-row items-start gap-5">
+                      <div
+                        class="w-16 h-16 rounded-full bg-white flex items-center justify-center ring-4 ring-slate-50 shrink-0 overflow-hidden shadow-sm"
+                      >
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAslTG9C06fhxYSyBNXXXTl4AukPDP_GEIxA&s"
+                          alt="Himpunan Mahasiswa Sistem Informasi"
+                          class="w-full h-full object-contain p-1"
+                          onerror="
+                            this.src =
+                              'https://ui-avatars.com/api/?name=HMSI&background=f8fafc&color=0ea5e9'
+                          "
+                        />
+                      </div>
+                      <div>
+                        <h2 class="text-xl font-bold text-slate-800">
+                          Himpunan Mahasiswa Sistem Informasi
+                        </h2>
+                        <h4 class="text-sky-600 font-semibold mt-1">
+                          Staff Divisi Pendidikan
+                        </h4>
+                        <p class="text-slate-500 mt-2 text-sm leading-relaxed">
+                          Berkontribusi dalam perancangan dan pelaksanaan
+                          program kerja akademik, termasuk pengembangan website
+                          literasi "Sabu Sabu" serta pengelolaan kegiatan
+                          edukatif untuk meningkatkan partisipasi dan kualitas
+                          pembelajaran mahasiswa.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ============ EXP SLIDE 2 (Item 3) ============ -->
+                <div class="exp-slide hidden flex-col gap-6" id="exp-slide-1">
+                  <!-- Experience 3: Antarestar -->
+                  <div
+                    class="bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <h3 class="text-lg font-bold text-sky-600 mb-4">
+                      Jul 2023 - Okt 2023
+                    </h3>
+                    <div class="flex flex-col sm:flex-row items-start gap-5">
+                      <div
+                        class="w-16 h-16 rounded-full bg-white flex items-center justify-center ring-4 ring-slate-50 shrink-0 overflow-hidden shadow-sm"
+                      >
+                        <img
+                          src="https://cdn.pintarnya.com/images/employer/logo_antarestar_oke_1771134916.png"
+                          alt="Antarestar"
+                          class="w-full h-full object-contain p-1"
+                          onerror="
+                            this.src =
+                              'https://ui-avatars.com/api/?name=Antarestar&background=f8fafc&color=0ea5e9'
+                          "
+                        />
+                      </div>
+                      <div>
+                        <h2 class="text-xl font-bold text-slate-800">
+                          Antarestar
+                        </h2>
+                        <h4 class="text-sky-600 font-semibold mt-1">
+                          Web Developer
+                        </h4>
+                        <p class="text-slate-500 mt-2 text-sm leading-relaxed">
+                          Mengembangkan dan meningkatkan kualitas website
+                          perusahaan berbasis WordPress melalui kustomisasi
+                          tema, pengaturan plugin, serta perbaikan layout
+                          responsif untuk meningkatkan pengalaman pengguna dan
+                          tampilan website.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Exp Slider Container -->
+
+              <!-- Navigation Buttons for Experience -->
+              <div class="flex justify-start lg:justify-end gap-3 mt-8">
+                <button
+                  onclick="prevExpProject()"
+                  class="w-10 h-10 bg-white border border-slate-200 shadow-sm rounded-full hover:border-sky-600 hover:text-sky-600 flex items-center justify-center text-slate-400 transition-all"
+                >
+                  <box-icon name="chevron-left" color="currentColor"></box-icon>
+                </button>
+                <button
+                  onclick="nextExpProject()"
+                  class="w-10 h-10 bg-sky-600 shadow-md shadow-sky-600/20 rounded-full hover:bg-sky-700 flex items-center justify-center text-white transition-all"
+                >
+                  <box-icon
+                    name="chevron-right"
+                    color="currentColor"
+                  ></box-icon>
+                </button>
+              </div>
+            </div>
+
             <!-- Certification Content -->
             <div id="certification" class="tab-content hidden">
               <h2 class="text-3xl font-bold mb-4 text-slate-800">
                 Course & <span class="text-sky-600">Certification</span>
               </h2>
               <p class="text-slate-600 leading-relaxed mb-8">
-                Saya telah menyelesaikan sertifikasi di bidang Web Development,
-                Algoritma, dan Data Analyst, yang semakin meningkatkan
-                kompetensi saya serta membantu saya tetap relevan dan mengikuti
-                standar industri terkini.
+                Saya telah menyelesaikan sertifikasi di bidang Pengembangan Web,
+                Algoritma, dan analis data, yang meningkatkan keterampilan saya
+                dan membuat saya selalu mengikuti perkembangan standar industri.
               </p>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                <!-- Card 1 -->
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                >
-                  <div class="flex justify-between items-center mb-4">
-                    <span
-                      class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                      >18 Nov 2023</span
-                    >
-                    <span class="text-xs font-medium text-slate-400"
-                      >Dicoding</span
-                    >
-                  </div>
+              <!-- Slider Container untuk Certification -->
+              <div id="cert-slider-container" class="relative">
+                <!-- ============ CERT SLIDE 1 (Card 1-4) ============ -->
+                <div class="cert-slide flex animate-fade-in" id="cert-slide-0">
                   <div
-                    class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full"
                   >
-                    <img
-                      src="img/Sertifikat Belajar Dasar Pemrograman Web Dicoding 1.jpg"
-                      alt="Certificate"
-                      class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                      "
-                    />
-                  </div>
-                  <h4
-                    class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                  >
-                    Belajar Dasar Pemrograman Web
-                  </h4>
-                  <div class="mt-auto pt-4">
-                    <a
-                      href="http://dicoding.com/certificates/2VX36Q0KNXYQ"
-                      target="_blank"
-                      class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                    <!-- Card 11 -->
+                    <div
+                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
                     >
-                      See Credentials
-                      <svg
-                        class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                      <div class="flex justify-between items-center mb-4">
+                        <span
+                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
+                          >28 Feb 2026</span
+                        >
+                        <span class="text-xs font-medium text-slate-400"
+                          >Dicoding</span
+                        >
+                      </div>
+                      <div
+                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        ></path>
-                      </svg>
-                    </a>
+                        <img
+                          src="img/Sertifikat Memulai Pemrograman dengan Python.png"
+                          alt="Certificate"
+                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                          onerror="
+                            this.src =
+                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
+                          "
+                        />
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
+                      >
+                        Memulai Pemrograman dengan Python
+                      </h4>
+                      <div class="mt-auto pt-4">
+                        <a
+                          href="http://dicoding.com/certificates/JLX1VGQ9NZ72"
+                          target="_blank"
+                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                        >
+                          See Credentials
+                          <svg
+                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            ></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Card 10 -->
+                    <div
+                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
+                    >
+                      <div class="flex justify-between items-center mb-4">
+                        <span
+                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
+                          >19 Feb 2026</span
+                        >
+                        <span class="text-xs font-medium text-slate-400"
+                          >Dicoding</span
+                        >
+                      </div>
+                      <div
+                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
+                      >
+                        <img
+                          src="img/Sertifikat Belajar Dasar Visualisasi Data.png"
+                          alt="Certificate"
+                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                          onerror="
+                            this.src =
+                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
+                          "
+                        />
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
+                      >
+                        Belajar Dasar Visualisasi Data
+                      </h4>
+                      <div class="mt-auto pt-4">
+                        <a
+                          href="http://dicoding.com/certificates/98XW0K47LXM3"
+                          target="_blank"
+                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                        >
+                          See Credentials
+                          <svg
+                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            ></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div
+                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
+                    >
+                      <div class="flex justify-between items-center mb-4">
+                        <span
+                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
+                          >17 Feb 2026</span
+                        >
+                        <span class="text-xs font-medium text-slate-400"
+                          >Dicoding</span
+                        >
+                      </div>
+                      <div
+                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
+                      >
+                        <img
+                          src="img/Sertifikat Belajar Dasar Data Science.png"
+                          alt="Certificate"
+                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                          onerror="
+                            this.src =
+                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
+                          "
+                        />
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
+                      >
+                        Belajar Dasar Data Science
+                      </h4>
+                      <div class="mt-auto pt-4">
+                        <a
+                          href="http://dicoding.com/certificates/1OP8RD3JVZQK"
+                          target="_blank"
+                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                        >
+                          See Credentials
+                          <svg
+                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            ></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div
+                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
+                    >
+                      <div class="flex justify-between items-center mb-4">
+                        <span
+                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
+                          >14 Feb 2026</span
+                        >
+                        <span class="text-xs font-medium text-slate-400"
+                          >Dicoding</span
+                        >
+                      </div>
+                      <div
+                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
+                      >
+                        <img
+                          src="img/Sertifikat Belajar Dasar Git dengan GitHub.png"
+                          alt="Certificate"
+                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                          onerror="
+                            this.src =
+                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
+                          "
+                        />
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
+                      >
+                        Belajar Dasar Git dengan GitHub
+                      </h4>
+                      <div class="mt-auto pt-4">
+                        <a
+                          href="http://dicoding.com/certificates/6RPN73M48X2M"
+                          target="_blank"
+                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                        >
+                          See Credentials
+                          <svg
+                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            ></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                >
-                  <div class="flex justify-between items-center mb-4">
-                    <span
-                      class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                      >20 Dec 2024</span
-                    >
-                    <span class="text-xs font-medium text-slate-400"
-                      >Coding Studio</span
-                    >
-                  </div>
+                <!-- ============ CERT SLIDE 2 (Card 5-8) ============ -->
+                <div class="cert-slide hidden" id="cert-slide-1">
                   <div
-                    class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full"
                   >
-                    <img
-                      src="img/Sertifikat Fundamental Algoritma.jpg"
-                      alt="Certificate"
-                      class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                      "
-                    />
-                  </div>
-                  <h4
-                    class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                  >
-                    Fundamental Algoritma
-                  </h4>
-                  <div class="mt-auto pt-4">
-                    <a
-                      href="https://member.codingstudio.id/certificate/uONAXyM087"
-                      target="_blank"
-                      class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                    <!-- Card 7 -->
+                    <div
+                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
                     >
-                      See Credentials
-                      <svg
-                        class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                      <div class="flex justify-between items-center mb-4">
+                        <span
+                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
+                          >10 Feb 2026</span
+                        >
+                        <span class="text-xs font-medium text-slate-400"
+                          >Dicoding</span
+                        >
+                      </div>
+                      <div
+                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        ></path>
-                      </svg>
-                    </a>
+                        <img
+                          src="img/Sertifikat Pengenalan ke Logika Pemrograman (Programming Logic 101).png"
+                          alt="Certificate"
+                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                          onerror="
+                            this.src =
+                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
+                          "
+                        />
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
+                      >
+                        Pengenalan ke Logika Pemrograman (Programming Logic 101)
+                      </h4>
+                      <div class="mt-auto pt-4">
+                        <a
+                          href="https://www.dicoding.com/certificates/ERZRL9462ZYV"
+                          target="_blank"
+                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                        >
+                          See Credentials
+                          <svg
+                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            ></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div
+                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
+                    >
+                      <div class="flex justify-between items-center mb-4">
+                        <span
+                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
+                          >9 Feb 2026</span
+                        >
+                        <span class="text-xs font-medium text-slate-400"
+                          >Dicoding</span
+                        >
+                      </div>
+                      <div
+                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
+                      >
+                        <img
+                          src="img/Sertifikat Memulai Dasar Pemrograman untuk Menjadi Pengembang Software.png"
+                          alt="Certificate"
+                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                          onerror="
+                            this.src =
+                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
+                          "
+                        />
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
+                      >
+                        Memulai Dasar Pemrograman untuk Menjadi Pengembang
+                        Software
+                      </h4>
+                      <div class="mt-auto pt-4">
+                        <a
+                          href="https://www.dicoding.com/certificates/GRX5J5V3YX0M"
+                          target="_blank"
+                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                        >
+                          See Credentials
+                          <svg
+                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            ></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
+                    >
+                      <div class="flex justify-between items-center mb-4">
+                        <span
+                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
+                          >11 Jan 2026</span
+                        >
+                        <span class="text-xs font-medium text-slate-400"
+                          >Dicoding</span
+                        >
+                      </div>
+                      <div
+                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
+                      >
+                        <img
+                          src="img/Sertifikat Introduction to Financial Literacy.png"
+                          alt="Certificate"
+                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                          onerror="
+                            this.src =
+                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
+                          "
+                        />
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
+                      >
+                        Introduction to Financial Literacy
+                      </h4>
+                      <div class="mt-auto pt-4">
+                        <a
+                          href="https://dicoding.com/certificates/JMZVVR2G3ZN9
+                          "
+                          target="_blank"
+                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                        >
+                          See Credentials
+                          <svg
+                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            ></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
+                    >
+                      <div class="flex justify-between items-center mb-4">
+                        <span
+                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
+                          >18 Nov 2023</span
+                        >
+                        <span class="text-xs font-medium text-slate-400"
+                          >Dicoding</span
+                        >
+                      </div>
+                      <div
+                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
+                      >
+                        <img
+                          src="img/Sertifikat Belajar Dasar Pemrograman Web Dicoding.png"
+                          alt="Certificate"
+                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                          onerror="
+                            this.src =
+                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
+                          "
+                        />
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
+                      >
+                        Belajar Dasar Pemrograman Web
+                      </h4>
+                      <div class="mt-auto pt-4">
+                        <a
+                          href="http://dicoding.com/certificates/2VX36Q0KNXYQ"
+                          target="_blank"
+                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                        >
+                          See Credentials
+                          <svg
+                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            ></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                >
-                  <div class="flex justify-between items-center mb-4">
-                    <span
-                      class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                      >25 Dec 2024</span
-                    >
-                    <span class="text-xs font-medium text-slate-400"
-                      >Coding Studio</span
-                    >
-                  </div>
+                <!-- ============ CERT SLIDE 3 (Card 9-10) ============ -->
+                <div class="cert-slide hidden" id="cert-slide-2">
                   <div
-                    class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full"
                   >
-                    <img
-                      src="img/Sertifikat Fundamental Database MySQL.jpg"
-                      alt="Certificate"
-                      class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                      "
-                    />
-                  </div>
-                  <h4
-                    class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                  >
-                    Fundamental Database MySQL
-                  </h4>
-                  <div class="mt-auto pt-4">
-                    <a
-                      href="https://member.codingstudio.id/certificate/tm8VyPuzEg"
-                      target="_blank"
-                      class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                    <!-- Card 3 -->
+                    <div
+                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
                     >
-                      See Credentials
-                      <svg
-                        class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                      <div class="flex justify-between items-center mb-4">
+                        <span
+                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
+                          >20 Dec 2024</span
+                        >
+                        <span class="text-xs font-medium text-slate-400"
+                          >Coding Studio</span
+                        >
+                      </div>
+                      <div
+                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        ></path>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
+                        <img
+                          src="img/Sertifikat Fundamental Algoritma.jpg"
+                          alt="Certificate"
+                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                          onerror="
+                            this.src =
+                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
+                          "
+                        />
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
+                      >
+                        Fundamental Algoritma
+                      </h4>
+                      <div class="mt-auto pt-4">
+                        <a
+                          href="https://member.codingstudio.id/certificate/uONAXyM087"
+                          target="_blank"
+                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                        >
+                          See Credentials
+                          <svg
+                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            ></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
 
-                <!-- Card 4 -->
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                >
-                  <div class="flex justify-between items-center mb-4">
-                    <span
-                      class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                      >25 Dec 2024</span
+                    <!-- Card 2 -->
+                    <div
+                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
                     >
-                    <span class="text-xs font-medium text-slate-400"
-                      >Coding Studio</span
-                    >
-                  </div>
-                  <div
-                    class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                  >
-                    <img
-                      src="img/Sertifikat Fundamental Python.jpg"
-                      alt="Certificate"
-                      class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                      "
-                    />
-                  </div>
-                  <h4
-                    class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                  >
-                    Fundamental Python
-                  </h4>
-                  <div class="mt-auto pt-4">
-                    <a
-                      href="https://member.codingstudio.id/certificate/Xvc0ts49JT"
-                      target="_blank"
-                      class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                    >
-                      See Credentials
-                      <svg
-                        class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                      <div class="flex justify-between items-center mb-4">
+                        <span
+                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
+                          >25 Dec 2024</span
+                        >
+                        <span class="text-xs font-medium text-slate-400"
+                          >Coding Studio</span
+                        >
+                      </div>
+                      <div
+                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        ></path>
-                      </svg>
-                    </a>
+                        <img
+                          src="img/Sertifikat Fundamental Database MySQL.jpg"
+                          alt="Certificate"
+                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                          onerror="
+                            this.src =
+                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
+                          "
+                        />
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
+                      >
+                        Fundamental Database MySQL
+                      </h4>
+                      <div class="mt-auto pt-4">
+                        <a
+                          href="https://member.codingstudio.id/certificate/tm8VyPuzEg"
+                          target="_blank"
+                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                        >
+                          See Credentials
+                          <svg
+                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            ></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Card 1 -->
+                    <div
+                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
+                    >
+                      <div class="flex justify-between items-center mb-4">
+                        <span
+                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
+                          >25 Dec 2024</span
+                        >
+                        <span class="text-xs font-medium text-slate-400"
+                          >Coding Studio</span
+                        >
+                      </div>
+                      <div
+                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
+                      >
+                        <img
+                          src="img/Sertifikat Fundamental Python.jpg"
+                          alt="Certificate"
+                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                          onerror="
+                            this.src =
+                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
+                          "
+                        />
+                      </div>
+                      <h4
+                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
+                      >
+                        Fundamental Python
+                      </h4>
+                      <div class="mt-auto pt-4">
+                        <a
+                          href="https://member.codingstudio.id/certificate/Xvc0ts49JT"
+                          target="_blank"
+                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
+                        >
+                          See Credentials
+                          <svg
+                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            ></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </div>
+              <!-- End Cert Slider Container -->
+
+              <!-- Navigation Buttons for Certification -->
+              <div class="flex justify-start lg:justify-end gap-3 mt-8">
+                <button
+                  onclick="prevCert()"
+                  class="w-10 h-10 bg-white border border-slate-200 shadow-sm rounded-full hover:border-sky-600 hover:text-sky-600 flex items-center justify-center text-slate-400 transition-all"
+                >
+                  <box-icon name="chevron-left" color="currentColor"></box-icon>
+                </button>
+                <button
+                  onclick="nextCert()"
+                  class="w-10 h-10 bg-sky-600 shadow-md shadow-sky-600/20 rounded-full hover:bg-sky-700 flex items-center justify-center text-white transition-all"
+                >
+                  <box-icon
+                    name="chevron-right"
+                    color="currentColor"
+                  ></box-icon>
+                </button>
               </div>
             </div>
 

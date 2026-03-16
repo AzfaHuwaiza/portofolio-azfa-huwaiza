@@ -40,7 +40,64 @@ function showContent(id) {
 }
 
 // ----------------------------------------
-// 3. Portfolio Slider Logic
+// 3. Experience Slider Logic
+// ----------------------------------------
+let currentExpSlide = 0;
+const expSlides = document.querySelectorAll(".exp-slide");
+
+function updateExpSlider() {
+  expSlides.forEach((slide, index) => {
+    if (index === currentExpSlide) {
+      slide.classList.remove("hidden");
+      slide.classList.add("flex", "animate-fade-in");
+    } else {
+      slide.classList.add("hidden");
+      slide.classList.remove("flex", "animate-fade-in");
+    }
+  });
+}
+
+function nextExpProject() {
+  currentExpSlide = (currentExpSlide + 1) % expSlides.length;
+  updateExpSlider();
+}
+
+function prevExpProject() {
+  currentExpSlide = (currentExpSlide - 1 + expSlides.length) % expSlides.length;
+  updateExpSlider();
+}
+
+// ----------------------------------------
+// 4. Certification Slider Logic
+// ----------------------------------------
+let currentCertSlide = 0;
+const certSlides = document.querySelectorAll(".cert-slide");
+
+function updateCertSlider() {
+  certSlides.forEach((slide, index) => {
+    if (index === currentCertSlide) {
+      slide.classList.remove("hidden");
+      slide.classList.add("flex", "animate-fade-in");
+    } else {
+      slide.classList.add("hidden");
+      slide.classList.remove("flex", "animate-fade-in");
+    }
+  });
+}
+
+function nextCert() {
+  currentCertSlide = (currentCertSlide + 1) % certSlides.length;
+  updateCertSlider();
+}
+
+function prevCert() {
+  currentCertSlide =
+    (currentCertSlide - 1 + certSlides.length) % certSlides.length;
+  updateCertSlider();
+}
+
+// ----------------------------------------
+// 5. Portfolio Slider Logic
 // ----------------------------------------
 let currentSlide = 0;
 const slides = document.querySelectorAll(".project-slide");
@@ -48,12 +105,9 @@ const slides = document.querySelectorAll(".project-slide");
 function updateSlider() {
   slides.forEach((slide, index) => {
     if (index === currentSlide) {
-      // Munculkan slide yang aktif
       slide.classList.remove("hidden");
-      // Tambahkan class flex agar strukturnya sejajar
       slide.classList.add("flex", "animate-fade-in");
     } else {
-      // Sembunyikan slide lainnya
       slide.classList.add("hidden");
       slide.classList.remove("flex", "animate-fade-in");
     }
@@ -71,7 +125,7 @@ function prevProject() {
 }
 
 // ----------------------------------------
-// 4. Contact Form to WhatsApp Logic
+// 6. Contact Form to WhatsApp Logic
 // ----------------------------------------
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
