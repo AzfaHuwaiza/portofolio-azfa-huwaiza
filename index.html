@@ -3,2113 +3,1549 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Azfa Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Azfa Huwaiza | Full Stack Developer Portfolio</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="img/azfa.png" type="image/png" />
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Boxicons CDN for Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                50: "#f8fafc",
+                800: "#1e293b",
+                900: "#0f172a",
+                950: "#020617",
+              },
+              accent: "#0284c7",
+            },
+            fontFamily: { sans: ["Inter", "sans-serif"] },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      .dark .glass-nav {
+        background: rgba(15, 23, 42, 0.8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .timeline-line {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #e2e8f0;
+      }
+      .dark .timeline-line {
+        background: #334155;
+      }
+      .cert-card:hover {
+        transform: translateY(-5px);
+      }
+    </style>
   </head>
 
-  <body class="bg-slate-50 text-slate-800 min-h-screen">
-    <!-- Hero Navbar Start -->
-
-    <nav
-      class="fixed top-0 left-0 right-0 z-50 bg-slate-100/80 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300"
-    >
+  <body
+    class="bg-white dark:bg-navy-950 text-slate-800 dark:text-slate-200 transition-colors duration-300"
+  >
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-[100] glass-nav">
       <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
       >
-        <!-- Logo -->
-        <a href="/#" class="flex items-center space-x-2 group">
-          <span
-            class="self-center text-2xl font-bold whitespace-nowrap tracking-tight text-slate-800"
-          >
-            <span
-              class="text-sky-600 transition-colors duration-300 group-hover:text-sky-500"
-              >Azfa</span
-            >
-            <span class="font-light text-slate-500">Portfolio</span>
-          </span>
+        <a
+          href="#"
+          class="text-2xl font-black tracking-tighter text-navy-900 dark:text-white"
+        >
+          AZFA<span class="text-accent"> PORTFOLIO</span>
         </a>
 
-        <!-- Tombol Hamburger (Mobile) -->
-        <button
-          id="mobile-menu-button"
-          type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-slate-500 rounded-lg md:hidden hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-100 transition-colors"
-          aria-expanded="false"
+        <div
+          class="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-widest"
         >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
+          <a href="#home" class="hover:text-accent transition-colors"
+            >Beranda</a
           >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
-
-        <!-- Menu Links -->
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-slate-200 rounded-lg bg-white/50 md:bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 shadow-sm md:shadow-none backdrop-blur-md md:backdrop-blur-none"
+          <a href="#experience" class="hover:text-accent transition-colors"
+            >Resume</a
           >
-            <li>
-              <a
-                href="#home"
-                class="nav-link block py-2 px-3 text-slate-600 rounded-sm hover:bg-slate-100 md:hover:bg-transparent md:border-0 hover:text-sky-600 md:p-0 transition-colors duration-200"
-                aria-current="page"
-                >Beranda</a
-              >
-            </li>
-            <li>
-              <a
-                href="#resume"
-                class="nav-link block py-2 px-3 text-slate-600 rounded-sm hover:bg-slate-100 md:hover:bg-transparent md:border-0 hover:text-sky-600 md:p-0 transition-colors duration-200"
-                >Resume</a
-              >
-            </li>
-            <li>
-              <a
-                href="#portfolio"
-                class="nav-link block py-2 px-3 text-slate-600 rounded-sm hover:bg-slate-100 md:hover:bg-transparent md:border-0 hover:text-sky-600 md:p-0 transition-colors duration-200"
-                >Portfolio</a
-              >
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="nav-link block py-2 px-3 text-slate-600 rounded-sm hover:bg-slate-100 md:hover:bg-transparent md:border-0 hover:text-sky-600 md:p-0 transition-colors duration-200"
-                >Kontak</a
-              >
-            </li>
-          </ul>
+          <a href="#portfolio" class="hover:text-accent transition-colors"
+            >Proyek</a
+          >
+          <a href="#contact" class="hover:text-accent transition-colors"
+            >Kontak</a
+          >
+          <button
+            id="dark-toggle"
+            class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 transition-all"
+          >
+            <i data-lucide="sun" id="sun-icon" class="hidden"></i>
+            <i data-lucide="moon" id="moon-icon"></i>
+          </button>
         </div>
+
+        <button class="md:hidden" id="mobile-menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
       </div>
     </nav>
 
-    <!-- Hero Navbar End -->
-
-    <!-- Hero Section Start -->
-
-    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-      <div class="max-w-screen-xl mx-auto px-6">
-        <div
-          class="flex flex-wrap lg:flex-nowrap items-start gap-12 lg:gap-8 flex-col-reverse lg:flex-row"
-        >
-          <!-- Text Content -->
-          <div class="w-full lg:w-1/2 text-center lg:text-left">
-            <h1
-              class="font-extrabold text-slate-800 text-4xl lg:text-5xl xl:text-6xl leading-tight mb-2"
+    <!-- Hero Section -->
+    <section id="home" class="pt-40 pb-20 px-6 relative overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16"
+      >
+        <div class="flex-1 space-y-8" data-aos="fade-right">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-accent rounded-full text-xs font-black uppercase tracking-widest"
+          >
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-accent"
+              ></span>
+            </span>
+            Available for Work
+          </div>
+          <h1
+            class="text-5xl lg:text-7xl font-black text-navy-900 dark:text-white leading-[1.1] tracking-tight"
+          >
+            Muhammad Azfa <br /><span class="text-accent"
+              >Huwaiza Al Aflah</span
             >
-              Muhammad Azfa <br />
-              <span class="text-sky-600">Huwaiza Al Aflah</span>
-            </h1>
-            <h2 class="font-medium text-slate-500 text-lg lg:text-2xl mb-6">
-              Student &
-              <span class="text-slate-700 font-semibold"
-                >Full Stack Web Developer</span
-              >
-            </h2>
-            <p
-              class="font-normal text-slate-600 mb-10 leading-relaxed mx-auto lg:mx-0"
+          </h1>
+          <h2 class="text-2xl font-medium text-slate-500">
+            Student &
+            <span class="text-navy-900 dark:text-white font-bold"
+              >Full Stack Web Developer</span
             >
-              Seorang Full Stack Web Developer yang berpengalaman dalam
-              membangun aplikasi web yang responsif dan efisien. Menguasai HTML,
-              CSS, dan JavaScript untuk pengembangan frontend, serta Python
-              dengan framework Django untuk sistem backend. Juga memiliki
-              ketertarikan dalam analisis dan pengolahan data menggunakan Python
-              untuk mengubah data menjadi insight yang bermakna, dengan fokus
-              pada desain yang intuitif, performa yang kuat, dan pengalaman
-              pengguna yang mulus.
-            </p>
+          </h2>
+          <p
+            class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-xl"
+          >
+            Seorang
+            <span class="font-bold text-navy-900 dark:text-white">
+              Full Stack Web
+            </span>
+            Developer yang berpengalaman dalam membangun aplikasi web yang
+            responsif dan efisien. Menguasai HTML, CSS, dan JavaScript untuk
+            pengembangan frontend, serta Python dengan framework Django untuk
+            sistem backend.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#portfolio"
+              class="px-8 py-4 bg-navy-900 dark:bg-accent text-white rounded-2xl font-bold hover:scale-105 transition-all shadow-xl shadow-blue-500/20"
+              >Lihat Portofolio</a
+            >
             <a
               href="#contact"
-              class="inline-block text-base font-semibold text-white bg-slate-800 py-3.5 px-8 rounded-full shadow-lg shadow-slate-800/20 hover:bg-slate-700 hover:-translate-y-1 transition-all duration-300"
+              class="px-8 py-4 border border-slate-200 dark:border-slate-800 rounded-2xl font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
+              >Hubungi Saya</a
             >
-              Hubungi Saya
-            </a>
           </div>
-
-          <!-- Image Content -->
-          <div
-            class="w-full lg:w-1/2 flex justify-center lg:justify-end mb-10 lg:mb-0"
-          >
-            <div class="relative">
-              <div
-                class="absolute inset-0 bg-sky-200 rounded-full blur-3xl opacity-60 transform scale-110 translate-y-4"
-              ></div>
-              <img
-                src="img/azfa.png"
-                alt="Azfa Huwaiza"
-                class="relative w-64 h-64 lg:w-96 lg:h-96 object-cover rounded-full ring-8 ring-white shadow-xl mx-auto"
-              />
-            </div>
+          <div class="flex items-center gap-6 pt-4 text-slate-400">
+            <a
+              href="https://github.com/AzfaHuwaiza"
+              target="_blank"
+              class="hover:text-accent"
+              ><i data-lucide="github"></i
+            ></a>
+            <a
+              href="https://linkedin.com/in/azfahuwaiza"
+              target="_blank"
+              class="hover:text-accent"
+              ><i data-lucide="linkedin"></i
+            ></a>
+            <a
+              href="https://instagram.com/azfa.huwaiza"
+              target="_blank"
+              class="hover:text-accent"
+              ><i data-lucide="instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="flex-1 relative" data-aos="zoom-in">
+          <div class="relative w-72 h-72 lg:w-[450px] lg:h-[450px] mx-auto">
+            <div
+              class="absolute inset-0 bg-accent/20 dark:bg-accent/10 rounded-[3rem] rotate-6 blur-3xl"
+            ></div>
+            <img
+              src="img/azfa.png"
+              alt="Azfa Profile"
+              class="relative w-full h-full object-cover rounded-[3rem] border-8 border-white dark:border-navy-900 shadow-2xl"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Hero Section End -->
-
-    <!-- Resume Section Start -->
-
-    <section id="resume" class="bg-slate-100 py-20 lg:py-32">
-      <div class="max-w-screen-xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-7 gap-8 lg:gap-12">
-          <!-- Tab Buttons (Left Column) -->
-          <div class="col-span-1 lg:col-span-2 flex flex-col gap-3">
-            <h2 class="text-3xl font-extrabold mb-5 text-slate-800">
-              Why Hire Me?
+    <!-- Experience & Education (Sync from CV) -->
+    <section id="experience" class="py-24 bg-slate-50 dark:bg-navy-900/50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20">
+          <!-- Work Experience -->
+          <div data-aos="fade-up">
+            <h2 class="text-3xl font-black mb-12 flex items-center gap-4">
+              <i data-lucide="briefcase" class="text-accent"></i> Pengalaman
+              Kerja
             </h2>
+            <div class="relative pl-10 space-y-12">
+              <div class="timeline-line"></div>
 
-            <button
-              class="tab-btn w-full text-left px-6 py-3.5 rounded-xl font-medium transition-all duration-300 bg-sky-600 text-white shadow-md"
-              onclick="showContent('about-me')"
-            >
-              About Me
-            </button>
-            <button
-              class="tab-btn w-full text-left px-6 py-3.5 rounded-xl font-medium transition-all duration-300 bg-white text-slate-600 hover:bg-sky-50 hover:text-sky-600 border border-slate-200"
-              onclick="showContent('education')"
-            >
-              Education
-            </button>
-            <button
-              class="tab-btn w-full text-left px-6 py-3.5 rounded-xl font-medium transition-all duration-300 bg-white text-slate-600 hover:bg-sky-50 hover:text-sky-600 border border-slate-200"
-              onclick="showContent('experience')"
-            >
-              Experience
-            </button>
-            <button
-              class="tab-btn w-full text-left px-6 py-3.5 rounded-xl font-medium transition-all duration-300 bg-white text-slate-600 hover:bg-sky-50 hover:text-sky-600 border border-slate-200"
-              onclick="showContent('certification')"
-            >
-              Course & Certification
-            </button>
-            <button
-              class="tab-btn w-full text-left px-6 py-3.5 rounded-xl font-medium transition-all duration-300 bg-white text-slate-600 hover:bg-sky-50 hover:text-sky-600 border border-slate-200"
-              onclick="showContent('skills')"
-            >
-              Skills
-            </button>
-          </div>
-
-          <!-- Tab Contents (Right Column) -->
-          <div class="col-span-1 lg:col-span-5 relative">
-            <!-- About Me Content -->
-            <div id="about-me" class="tab-content block animate-fade-in">
-              <h2 class="text-3xl font-bold mb-4 text-slate-800">
-                About <span class="text-sky-600">Me!</span>
-              </h2>
-              <p class="text-slate-600 leading-relaxed mb-8">
-                Saya adalah mahasiswa Sistem Informasi yang memiliki minat besar
-                dalam bidang pengembangan web dan teknologi. Dengan latar
-                belakang Rekayasa Perangkat Lunak, saya telah membangun fondasi
-                yang kuat dalam mengembangkan aplikasi web modern menggunakan
-                teknologi frontend maupun backend. Fokus utama saya adalah full
-                stack web development menggunakan HTML, CSS, JavaScript, serta
-                Python dengan framework Django. Selain pengembangan web, saya
-                juga tertarik pada analisis dan pengolahan data menggunakan
-                Python. Saya senang mempelajari teknologi baru, meningkatkan
-                kemampuan pemecahan masalah, serta membangun solusi digital yang
-                bermakna, efisien, scalable, dan ramah pengguna.
-              </p>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-6">
-                <div class="flex pb-2 border-b border-slate-200">
-                  <span class="font-bold text-sky-600 min-w-[100px]">Name</span>
-                  <span class="text-slate-700"
-                    >Muhammad Azfa Huwaiza Al Aflah</span
-                  >
-                </div>
-                <div class="flex pb-2 border-b border-slate-200">
-                  <span class="font-bold text-sky-600 min-w-[100px]"
-                    >Gender</span
-                  >
-                  <span class="text-slate-700">Male</span>
-                </div>
-                <div class="flex pb-2 border-b border-slate-200">
-                  <span class="font-bold text-sky-600 min-w-[100px]">Age</span>
-                  <span class="text-slate-700">21 Years Old</span>
-                </div>
-                <div class="flex pb-2 border-b border-slate-200">
-                  <span class="font-bold text-sky-600 min-w-[100px]"
-                    >Status</span
-                  >
-                  <span class="text-slate-700">Undergraduate Student</span>
-                </div>
-                <div class="flex pb-2 border-b border-slate-200">
-                  <span class="font-bold text-sky-600 min-w-[100px]"
-                    >Major</span
-                  >
-                  <span class="text-slate-700">Information System</span>
-                </div>
-                <div class="flex pb-2 border-b border-slate-200">
-                  <span class="font-bold text-sky-600 min-w-[100px]"
-                    >Nationality</span
-                  >
-                  <span class="text-slate-700">Indonesian</span>
-                </div>
-                <div class="flex pb-2 border-b border-slate-200">
-                  <span class="font-bold text-sky-600 min-w-[100px]"
-                    >Freelance</span
-                  >
-                  <span class="text-slate-700">Available</span>
-                </div>
-                <div class="flex pb-2 border-b border-slate-200">
-                  <span class="font-bold text-sky-600 min-w-[100px]"
-                    >Phone</span
-                  >
-                  <span class="text-slate-700">(+62) 821 2382 4490</span>
-                </div>
-                <div class="flex pb-2 border-b border-slate-200">
-                  <span class="font-bold text-sky-600 min-w-[100px]"
-                    >Email</span
-                  >
-                  <span class="text-slate-700">mazfahuwaiza@gmail.com</span>
-                </div>
-                <div class="flex pb-2 border-b border-slate-200">
-                  <span class="font-bold text-sky-600 min-w-[100px]"
-                    >Languages</span
-                  >
-                  <span class="text-slate-700">Indonesia, English</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Education Content -->
-            <div id="education" class="tab-content hidden">
-              <h2 class="text-3xl font-bold mb-4 text-slate-800">
-                My <span class="text-sky-600">Education</span>
-              </h2>
-              <p class="text-slate-600 leading-relaxed mb-8">
-                Pendidikan saya telah membekali saya dengan fondasi yang kuat di
-                bidang Teknologi Informasi. Sejak di bangku SMK, saya mengambil
-                jurusan Rekayasa Perangkat Lunak (Software Engineering), yang
-                semakin memperkuat passion saya di dunia IT. Saat ini, saya
-                melanjutkan studi di Universitas Siliwangi dengan jurusan Sistem
-                Informasi, yang masih berada pada jalur yang sama, sehingga saya
-                dapat terus mengembangkan keterampilan dalam pengembangan
-                perangkat lunak dan sistem teknologi.
-              </p>
-
-              <div class="flex flex-col gap-6">
-                <!-- University -->
-                <div
-                  class="bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <h3 class="text-lg font-bold text-sky-600 mb-4">
-                    2023 - Sekarang
-                  </h3>
-                  <div class="flex flex-col sm:flex-row items-start gap-5">
-                    <img
-                      src="img/unsil.png"
-                      alt="Siliwangi University"
-                      class="w-16 h-16 rounded-full object-cover bg-slate-100 ring-4 ring-slate-50"
-                      onerror="
-                        this.src =
-                          'https://ui-avatars.com/api/?name=UNSIL&background=f8fafc&color=0ea5e9'
-                      "
-                    />
-                    <div>
-                      <h2 class="text-xl font-bold text-slate-800">
-                        Siliwangi University
-                      </h2>
-                      <p class="text-slate-500 mt-2 text-sm leading-relaxed">
-                        Saat ini sedang menempuh pendidikan di bidang Sistem
-                        Informasi, dengan fokus pada pengembangan web, sistem
-                        basis data, dan prinsip-prinsip rekayasa perangkat
-                        lunak. Selain itu, juga mengembangkan kompetensi sebagai
-                        Data Analyst, dengan kemampuan dalam pengolahan,
-                        analisis, dan interpretasi data menggunakan Python untuk
-                        menghasilkan insight yang mendukung pengambilan
-                        keputusan. Aktif mengasah keterampilan dalam full stack
-                        development dan data processing melalui berbagai proyek
-                        akademik maupun proyek pribadi.
-                      </p>
-                      <p
-                        class="text-sky-700 font-semibold mt-3 bg-sky-50 inline-block px-3 py-1 rounded-lg text-sm"
-                      >
-                        GPA: 3.81 / 4.00
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- High School -->
-                <div
-                  class="bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <h3 class="text-lg font-bold text-sky-600 mb-4">
-                    2020 - 2023
-                  </h3>
-                  <div class="flex flex-col sm:flex-row items-start gap-5">
-                    <img
-                      src="img/smk.png"
-                      alt="SMK Negeri 4 Kota Tasikmalaya"
-                      class="w-16 h-16 rounded-full object-cover bg-slate-100 ring-4 ring-slate-50"
-                      onerror="
-                        this.src =
-                          'https://ui-avatars.com/api/?name=SMK&background=f8fafc&color=0ea5e9'
-                      "
-                    />
-                    <div>
-                      <h2 class="text-xl font-bold text-slate-800">
-                        SMK Negeri 4 Kota Tasikmalaya
-                      </h2>
-                      <p class="text-slate-500 mt-2 text-sm leading-relaxed">
-                        Mempelajari Rekayasa Perangkat Lunak dengan penekanan
-                        kuat pada dasar-dasar pemrograman, pengembangan web, dan
-                        perancangan sistem. Mendapatkan pengalaman praktis dalam
-                        membangun aplikasi berbasis web serta memahami alur
-                        kerja dalam proses pengembangan perangkat lunak.
-                      </p>
-                      <!-- <p
-                        class="text-sky-700 font-semibold mt-3 bg-sky-50 inline-block px-3 py-1 rounded-lg text-sm"
-                      >
-                        GPA: 85 / 100
-                      </p> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Experience Content -->
-            <div id="experience" class="tab-content hidden">
-              <h2 class="text-3xl font-bold mb-4 text-slate-800">
-                My <span class="text-sky-600">Experience</span>
-              </h2>
-              <p class="text-slate-600 leading-relaxed mb-8">
-                Berikut adalah perjalanan karier dan pengalaman profesional
-                saya. Saya selalu berusaha untuk memberikan yang terbaik,
-                mengimplementasikan ilmu yang dimiliki, dan terus belajar di
-                setiap kesempatan.
-              </p>
-
-              <!-- Slider Container untuk Experience -->
-              <div id="exp-slider-container" class="relative">
-                <!-- ============ EXP SLIDE 1 (Item 1 & 2) ============ -->
-                <div
-                  class="exp-slide flex flex-col gap-6 animate-fade-in"
-                  id="exp-slide-0"
-                >
-                  <!-- Experience 1: Sakata -->
-                  <div
-                    class="bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-                  >
-                    <h3 class="text-lg font-bold text-sky-600 mb-4">
-                      Jul 2025 - Sekarang
-                    </h3>
-                    <div class="flex flex-col sm:flex-row items-start gap-5">
-                      <div
-                        class="w-16 h-16 rounded-full bg-white flex items-center justify-center ring-4 ring-slate-50 shrink-0 overflow-hidden shadow-sm"
-                      >
-                        <img
-                          src="https://www.sakattaku.com/images/logo-sakata.png"
-                          alt="Sakata Innovation Center"
-                          class="w-full h-full object-contain p-1"
-                          onerror="
-                            this.src =
-                              'https://ui-avatars.com/api/?name=Sakata&background=f8fafc&color=0ea5e9'
-                          "
-                        />
-                      </div>
-                      <div>
-                        <h2 class="text-xl font-bold text-slate-800">
-                          Sakata Innovation Center
-                        </h2>
-                        <h4 class="text-sky-600 font-semibold mt-1">
-                          Co-Fasilitator (Program Koding & KA)
-                        </h4>
-                        <p class="text-slate-500 mt-2 text-sm leading-relaxed">
-                          Mendampingi pelaksanaan program pembelajaran koding
-                          dan kegiatan pengembangan keterampilan digital bagi
-                          peserta. Berperan dalam membantu fasilitator utama
-                          dalam penyampaian materi, membimbing peserta saat
-                          praktik, serta memastikan proses pembelajaran berjalan
-                          efektif dan interaktif.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Experience 2: HMSI -->
-                  <div
-                    class="bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-                  >
-                    <h3 class="text-lg font-bold text-sky-600 mb-4">
-                      Mar 2025 - Des 2025
-                    </h3>
-                    <div class="flex flex-col sm:flex-row items-start gap-5">
-                      <div
-                        class="w-16 h-16 rounded-full bg-white flex items-center justify-center ring-4 ring-slate-50 shrink-0 overflow-hidden shadow-sm"
-                      >
-                        <img
-                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAslTG9C06fhxYSyBNXXXTl4AukPDP_GEIxA&s"
-                          alt="Himpunan Mahasiswa Sistem Informasi"
-                          class="w-full h-full object-contain p-1"
-                          onerror="
-                            this.src =
-                              'https://ui-avatars.com/api/?name=HMSI&background=f8fafc&color=0ea5e9'
-                          "
-                        />
-                      </div>
-                      <div>
-                        <h2 class="text-xl font-bold text-slate-800">
-                          Himpunan Mahasiswa Sistem Informasi
-                        </h2>
-                        <h4 class="text-sky-600 font-semibold mt-1">
-                          Staff Divisi Pendidikan
-                        </h4>
-                        <p class="text-slate-500 mt-2 text-sm leading-relaxed">
-                          Berkontribusi dalam perancangan dan pelaksanaan
-                          program kerja akademik, termasuk pengembangan website
-                          literasi "Sabu Sabu" serta pengelolaan kegiatan
-                          edukatif untuk meningkatkan partisipasi dan kualitas
-                          pembelajaran mahasiswa.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- ============ EXP SLIDE 2 (Item 3) ============ -->
-                <div class="exp-slide hidden flex-col gap-6" id="exp-slide-1">
-                  <!-- Experience 3: Antarestar -->
-                  <div
-                    class="bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-                  >
-                    <h3 class="text-lg font-bold text-sky-600 mb-4">
-                      Jul 2023 - Okt 2023
-                    </h3>
-                    <div class="flex flex-col sm:flex-row items-start gap-5">
-                      <div
-                        class="w-16 h-16 rounded-full bg-white flex items-center justify-center ring-4 ring-slate-50 shrink-0 overflow-hidden shadow-sm"
-                      >
-                        <img
-                          src="https://cdn.pintarnya.com/images/employer/logo_antarestar_oke_1771134916.png"
-                          alt="Antarestar"
-                          class="w-full h-full object-contain p-1"
-                          onerror="
-                            this.src =
-                              'https://ui-avatars.com/api/?name=Antarestar&background=f8fafc&color=0ea5e9'
-                          "
-                        />
-                      </div>
-                      <div>
-                        <h2 class="text-xl font-bold text-slate-800">
-                          Antarestar
-                        </h2>
-                        <h4 class="text-sky-600 font-semibold mt-1">
-                          Web Developer
-                        </h4>
-                        <p class="text-slate-500 mt-2 text-sm leading-relaxed">
-                          Mengembangkan dan meningkatkan kualitas website
-                          perusahaan berbasis WordPress melalui kustomisasi
-                          tema, pengaturan plugin, serta perbaikan layout
-                          responsif untuk meningkatkan pengalaman pengguna dan
-                          tampilan website.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Exp Slider Container -->
-
-              <!-- Navigation Buttons for Experience -->
-              <div class="flex justify-start lg:justify-end gap-3 mt-8">
-                <button
-                  onclick="prevExpProject()"
-                  class="w-10 h-10 bg-white border border-slate-200 shadow-sm rounded-full hover:border-sky-600 hover:text-sky-600 flex items-center justify-center text-slate-400 transition-all"
-                >
-                  <box-icon name="chevron-left" color="currentColor"></box-icon>
-                </button>
-                <button
-                  onclick="nextExpProject()"
-                  class="w-10 h-10 bg-sky-600 shadow-md shadow-sky-600/20 rounded-full hover:bg-sky-700 flex items-center justify-center text-white transition-all"
-                >
-                  <box-icon
-                    name="chevron-right"
-                    color="currentColor"
-                  ></box-icon>
-                </button>
-              </div>
-            </div>
-
-            <!-- Certification Content -->
-            <div id="certification" class="tab-content hidden">
-              <h2 class="text-3xl font-bold mb-4 text-slate-800">
-                Course & <span class="text-sky-600">Certification</span>
-              </h2>
-              <p class="text-slate-600 leading-relaxed mb-8">
-                Saya telah menyelesaikan sertifikasi di bidang Pengembangan Web,
-                Algoritma, dan analis data, yang meningkatkan keterampilan saya
-                dan membuat saya selalu mengikuti perkembangan standar industri.
-              </p>
-
-              <!-- Slider Container untuk Certification -->
-              <div id="cert-slider-container" class="relative">
-                <!-- ============ CERT SLIDE 0 ============ -->
-                <div class="cert-slide flex animate-fade-in" id="cert-slide-0">
-                  <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full"
-                  >
-                    <!-- Card 16 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >29 Mei 2026</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Belajar Matematika untuk Data Science.png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Belajar Matematika untuk Data Science
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="http://dicoding.com/certificates/N9ZONLG76XG5"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Card 15 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >29 April 2026</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Belajar Dasar AI.png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Belajar Dasar AI
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="http://dicoding.com/certificates/N9ZON92V6XG5"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Card 14 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >28 April 2026</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Belajar Fundamental Pemrosesan Data.png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Belajar Fundamental Pemrosesan Data
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="http://dicoding.com/certificates/L4PQ9E5N2PO1"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Card 13 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >18 April 2026</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Belajar Fundamental Analisis Data.png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Belajar Fundamental Analisis Data
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="http://dicoding.com/certificates/6RPN7YVV8X2M"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- ============ CERT SLIDE 1 ============ -->
-                <div class="cert-slide hidden" id="cert-slide-1">
-                  <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full"
-                  >
-                    <!-- Card 12 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >27 Maret 2026</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Belajar Machine Lerarning untuk Pemula.png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Belajar Machine Lerarning untuk Pemula
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="http://dicoding.com/certificates/MRZMWLR7RPYQ"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Card 11 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >28 Februari 2026</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Memulai Pemrograman dengan Python.png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Memulai Pemrograman dengan Python
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="http://dicoding.com/certificates/JLX1VGQ9NZ72"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Card 10 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >19 Februari 2026</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Belajar Dasar Visualisasi Data.png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Belajar Dasar Visualisasi Data
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="http://dicoding.com/certificates/98XW0K47LXM3"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Card 9 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >17 Februari 2026</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Belajar Dasar Data Science.png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Belajar Dasar Data Science
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="http://dicoding.com/certificates/1OP8RD3JVZQK"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- ============ CERT SLIDE 2 ============ -->
-                <div class="cert-slide hidden" id="cert-slide-2">
-                  <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full"
-                  >
-                    <!-- Card 8 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >14 Februari 2026</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Belajar Dasar Git dengan GitHub.png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Belajar Dasar Git dengan GitHub
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="http://dicoding.com/certificates/6RPN73M48X2M"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Card 7 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >10 Februari 2026</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Pengenalan ke Logika Pemrograman (Programming Logic 101).png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Pengenalan ke Logika Pemrograman (Programming Logic 101)
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="https://www.dicoding.com/certificates/ERZRL9462ZYV"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >9 Februari 2026</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Memulai Dasar Pemrograman untuk Menjadi Pengembang Software.png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Memulai Dasar Pemrograman untuk Menjadi Pengembang
-                        Software
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="https://www.dicoding.com/certificates/GRX5J5V3YX0M"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >11 Januari 2026</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Introduction to Financial Literacy.png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Introduction to Financial Literacy
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="https://dicoding.com/certificates/JMZVVR2G3ZN9
-                          "
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- ============ CERT SLIDE 3 ============ -->
-                <div class="cert-slide hidden" id="cert-slide-3">
-                  <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 w-full"
-                  >
-                    <!-- Card 4 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >18 November 2023</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Dicoding</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Belajar Dasar Pemrograman Web Dicoding.png"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Belajar Dasar Pemrograman Web
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="http://dicoding.com/certificates/2VX36Q0KNXYQ"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >20 Desember 2024</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Coding Studio</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Fundamental Algoritma.jpg"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Fundamental Algoritma
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="https://member.codingstudio.id/certificate/uONAXyM087"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >25 Desember 2024</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Coding Studio</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Fundamental Database MySQL.jpg"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Fundamental Database MySQL
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="https://member.codingstudio.id/certificate/tm8VyPuzEg"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Card 1 -->
-                    <div
-                      class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-200 transition-all flex flex-col h-full"
-                    >
-                      <div class="flex justify-between items-center mb-4">
-                        <span
-                          class="text-xs font-bold px-3 py-1 bg-sky-50 text-sky-600 rounded-full"
-                          >25 Desember 2024</span
-                        >
-                        <span class="text-xs font-medium text-slate-400"
-                          >Coding Studio</span
-                        >
-                      </div>
-                      <div
-                        class="h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden"
-                      >
-                        <img
-                          src="img/Sertifikat Fundamental Python.jpg"
-                          alt="Certificate"
-                          class="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                          onerror="
-                            this.src =
-                              'https://placehold.co/400x300/e2e8f0/64748b?text=Certificate+Image'
-                          "
-                        />
-                      </div>
-                      <h4
-                        class="text-lg font-bold text-slate-800 mb-1 leading-tight"
-                      >
-                        Fundamental Python
-                      </h4>
-                      <div class="mt-auto pt-4">
-                        <a
-                          href="https://member.codingstudio.id/certificate/Xvc0ts49JT"
-                          target="_blank"
-                          class="text-sm text-sky-600 hover:text-sky-700 font-semibold flex items-center gap-1 group"
-                        >
-                          See Credentials
-                          <svg
-                            class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Cert Slider Container -->
-
-              <!-- Navigation Buttons for Certification -->
-              <div class="flex justify-start lg:justify-end gap-3 mt-8">
-                <button
-                  onclick="prevCert()"
-                  class="w-10 h-10 bg-white border border-slate-200 shadow-sm rounded-full hover:border-sky-600 hover:text-sky-600 flex items-center justify-center text-slate-400 transition-all"
-                >
-                  <box-icon name="chevron-left" color="currentColor"></box-icon>
-                </button>
-                <button
-                  onclick="nextCert()"
-                  class="w-10 h-10 bg-sky-600 shadow-md shadow-sky-600/20 rounded-full hover:bg-sky-700 flex items-center justify-center text-white transition-all"
-                >
-                  <box-icon
-                    name="chevron-right"
-                    color="currentColor"
-                  ></box-icon>
-                </button>
-              </div>
-            </div>
-
-            <!-- Skills Content -->
-            <div id="skills" class="tab-content hidden">
-              <h2 class="text-3xl font-bold mb-4 text-slate-800">
-                My <span class="text-sky-600">Skills</span>
-              </h2>
-              <p class="text-slate-600 leading-relaxed mb-8">
-                Memiliki kemampuan dalam pemrograman dan berpikir kritis, dengan
-                keterampilan pemecahan masalah yang baik serta antusiasme tinggi
-                untuk terus mengembangkan dan meningkatkan kemampuan diri.
-              </p>
-
-              <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
-                <!-- Skill Icons -->
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-6 flex justify-center items-center shadow-sm hover:shadow-md hover:border-sky-200 transition-all group"
-                >
-                  <img
-                    src="https://cdn.iconscout.com/icon/free/png-256/free-html-logo-icon-svg-download-png-3030115.png"
-                    class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                    alt="HTML5"
-                    title="HTML5"
-                  />
-                </div>
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-6 flex justify-center items-center shadow-sm hover:shadow-md hover:border-sky-200 transition-all group"
-                >
-                  <img
-                    src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon~old.svg"
-                    class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                    alt="CSS3"
-                    title="CSS3"
-                  />
-                </div>
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-6 flex justify-center items-center shadow-sm hover:shadow-md hover:border-sky-200 transition-all group"
-                >
-                  <img
-                    src="https://www.svgrepo.com/show/303206/javascript-logo.svg"
-                    class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                    alt="JavaScript"
-                    title="JavaScript"
-                  />
-                </div>
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-6 flex justify-center items-center shadow-sm hover:shadow-md hover:border-sky-200 transition-all group"
-                >
-                  <img
-                    src="https://www.svgrepo.com/show/452088/php.svg"
-                    class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                    alt="PHP"
-                    title="PHP"
-                  />
-                </div>
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-6 flex justify-center items-center shadow-sm hover:shadow-md hover:border-sky-200 transition-all group"
-                >
-                  <img
-                    src="https://www.svgrepo.com/show/353985/laravel.svg"
-                    class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                    alt="Laravel"
-                    title="Laravel"
-                  />
-                </div>
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-6 flex justify-center items-center shadow-sm hover:shadow-md hover:border-sky-200 transition-all group"
-                >
-                  <img
-                    src="https://www.svgrepo.com/show/473731/mysql.svg"
-                    class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                    alt="MySQL"
-                    title="MySQL"
-                  />
-                </div>
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-6 flex justify-center items-center shadow-sm hover:shadow-md hover:border-sky-200 transition-all group"
-                >
-                  <img
-                    src="https://www.svgrepo.com/show/374118/tailwind.svg"
-                    class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                    alt="Tailwind CSS"
-                    title="Tailwind CSS"
-                  />
-                </div>
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-6 flex justify-center items-center shadow-sm hover:shadow-md hover:border-sky-200 transition-all group"
-                >
-                  <img
-                    src="https://www.svgrepo.com/show/373554/django.svg"
-                    class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                    alt="Django"
-                    title="Django"
-                  />
-                </div>
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-6 flex justify-center items-center shadow-sm hover:shadow-md hover:border-sky-200 transition-all group"
-                >
-                  <img
-                    src="https://www.svgrepo.com/show/452091/python.svg"
-                    class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                    alt="Python"
-                    title="Python"
-                  />
-                </div>
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-6 flex justify-center items-center shadow-sm hover:shadow-md hover:border-sky-200 transition-all group"
-                >
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/960px-GitHub_Invertocat_Logo.svg.png"
-                    class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                    alt="Github"
-                    title="Github"
-                  />
-                </div>
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-6 flex justify-center items-center shadow-sm hover:shadow-md hover:border-sky-200 transition-all group"
-                >
-                  <img
-                    src="https://www.svgrepo.com/show/452202/figma.svg"
-                    class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                    alt="Figma"
-                    title="Figma"
-                  />
-                </div>
-                <div
-                  class="bg-white border border-slate-200 rounded-2xl p-6 flex justify-center items-center shadow-sm hover:shadow-md hover:border-sky-200 transition-all group"
-                >
-                  <img
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/canva-icon.png"
-                    class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 grayscale group-hover:grayscale-0"
-                    alt="Canva"
-                    title="Canva"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Resume Section End -->
-
-    <!-- Portfolio Section Start -->
-
-    <section
-      id="portfolio"
-      class="py-20 lg:py-32 bg-white relative overflow-hidden"
-    >
-      <div class="max-w-screen-xl mx-auto px-6">
-        <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-800 mb-12">
-          Latest <span class="text-sky-600">Project</span>
-        </h2>
-
-        <!-- Slider Container -->
-        <div id="project-slider" class="relative">
-          <!-- ================= SLIDE 1 ================= -->
-          <div
-            class="project-slide flex flex-col lg:flex-row items-center gap-10 lg:gap-16 animate-fade-in"
-            id="slide-0"
-          >
-            <!-- Left Content -->
-            <div class="w-full lg:w-1/2 space-y-6">
+              <!-- Sakata (Updated from CV) -->
               <div class="relative">
-                <!-- Watermark Style Number -->
-                <h2
-                  class="text-8xl md:text-[9rem] font-black text-slate-100 absolute -top-12 md:-top-16 -left-4 md:-left-6 z-0 pointer-events-none select-none"
-                >
-                  01
-                </h2>
-                <h3
-                  class="text-3xl font-bold text-slate-800 relative z-10 pt-4"
-                >
-                  Plastic Shop
-                </h3>
-              </div>
-
-              <p class="text-slate-600 leading-relaxed relative z-10">
-                Website e-commerce yang dirancang untuk menjual produk kemasan
-                plastik thinwall. Pengguna dapat melihat katalog produk dan
-                melakukan pemesanan langsung melalui website dengan sistem
-                pembayaran Cash on Delivery (COD). Sistem dilengkapi fitur
-                manajemen produk, keranjang belanja, dan pengelolaan pesanan,
-                dibangun menggunakan Django sebagai backend dan Bootstrap untuk
-                tampilan yang responsif dan user-friendly.
-              </p>
-
-              <div class="flex flex-col gap-3 relative z-10">
-                <span
-                  class="text-sm font-bold text-slate-400 uppercase tracking-wider"
-                  >Tech Stack</span
-                >
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-sky-100"
-                    >Python</span
-                  >
-                  <span
-                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-sky-100"
-                    >Django</span
-                  >
-                  <span
-                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-sky-100"
-                    >Bootstrap CSS</span
-                  >
-                  <span
-                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-sky-100"
-                    >MySQL</span
-                  >
-                </div>
-              </div>
-
-              <div class="flex gap-4 pt-4 relative z-10">
-                <a
-                  href="https://github.com/AzfaHuwaiza/ecommerce-plastic-shop"
-                  class="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-sm"
-                  target="_blank"
-                >
-                  <box-icon
-                    type="logo"
-                    name="github"
-                    color="currentColor"
-                  ></box-icon>
-                </a>
-              </div>
-            </div>
-
-            <!-- Right Content (Image) -->
-            <div class="w-full lg:w-1/2 relative group mt-8 lg:mt-0">
-              <!-- Glow background -->
-              <div
-                class="absolute inset-0 bg-sky-200 rounded-2xl blur-xl opacity-50 transform group-hover:scale-105 transition-transform duration-500"
-              ></div>
-              <!-- Image -->
-              <img
-                src="img/project1.png"
-                alt="Project Preview 1"
-                class="relative rounded-2xl shadow-lg border border-slate-200 w-full h-auto object-cover transform group-hover:-translate-y-2 transition-transform duration-500"
-                onerror="
-                  this.src =
-                    'https://placehold.co/800x500/f8fafc/94a3b8?text=Project+Preview+1'
-                "
-              />
-            </div>
-          </div>
-
-          <!-- ================= SLIDE 2 ================= -->
-          <div
-            class="project-slide hidden flex-col lg:flex-row items-center gap-10 lg:gap-16"
-            id="slide-1"
-          >
-            <!-- Left Content -->
-            <div class="w-full lg:w-1/2 space-y-6">
-              <div class="relative">
-                <!-- Watermark Style Number -->
-                <h2
-                  class="text-8xl md:text-[9rem] font-black text-slate-100 absolute -top-12 md:-top-16 -left-4 md:-left-6 z-0 pointer-events-none select-none"
-                >
-                  02
-                </h2>
-                <h3
-                  class="text-3xl font-bold text-slate-800 relative z-10 pt-4"
-                >
-                  SIAKAD <br />
-                  TK IT Ibadurrohman
-                </h3>
-              </div>
-
-              <p class="text-slate-600 leading-relaxed relative z-10">
-                Sistem Informasi Akademik (SIAKAD) berbasis web yang
-                dikembangkan untuk mendukung pengelolaan data siswa, guru, dan
-                administrasi sekolah di TK IT Ibadurrohman. Sistem ini mencakup
-                fitur manajemen data siswa, pengelolaan kelas, input
-                perkembangan siswa, serta sistem autentikasi pengguna. Dibangun
-                menggunakan Django sebagai backend untuk memastikan keamanan dan
-                struktur data yang terorganisir, serta dirancang dengan
-                antarmuka yang responsif dan mudah digunakan.
-              </p>
-
-              <div class="flex flex-col gap-3 relative z-10">
-                <span
-                  class="text-sm font-bold text-slate-400 uppercase tracking-wider"
-                  >Tech Stack</span
-                >
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-3 py-1.5 bg-green-50 text-green-600 rounded-lg text-sm font-medium border border-green-100"
-                    >Python</span
-                  >
-                  <span
-                    class="px-3 py-1.5 bg-green-50 text-green-600 rounded-lg text-sm font-medium border border-green-100"
-                    >Django</span
-                  >
-                  <span
-                    class="px-3 py-1.5 bg-green-50 text-green-600 rounded-lg text-sm font-medium border border-green-100"
-                    >Tailwind CSS</span
-                  >
-                  <span
-                    class="px-3 py-1.5 bg-green-50 text-green-600 rounded-lg text-sm font-medium border border-green-100"
-                    >PostgreSQL</span
-                  >
-                </div>
-              </div>
-
-              <div class="flex gap-4 pt-4 relative z-10">
-                <a
-                  href="https://github.com/AzfaHuwaiza/tkit_ibadurrohman"
-                  class="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-sm"
-                  target="_blank"
-                >
-                  <box-icon
-                    type="logo"
-                    name="github"
-                    color="currentColor"
-                  ></box-icon>
-                </a>
-              </div>
-            </div>
-
-            <!-- Right Content (Image) -->
-            <div class="w-full lg:w-1/2 relative group mt-8 lg:mt-0">
-              <!-- Glow background -->
-              <div
-                class="absolute inset-0 bg-green-200 rounded-2xl blur-xl opacity-50 transform group-hover:scale-105 transition-transform duration-500"
-              ></div>
-              <!-- Image -->
-              <img
-                src="img/project2.png"
-                alt="Project Preview 2"
-                class="relative rounded-2xl shadow-lg border border-slate-200 w-full h-auto object-cover transform group-hover:-translate-y-2 transition-transform duration-500"
-              />
-            </div>
-          </div>
-
-          <!-- ================= SLIDE 3 ================= -->
-          <div
-            class="project-slide hidden flex-col lg:flex-row items-center gap-10 lg:gap-16"
-            id="slide-3"
-          >
-            <!-- Left Content -->
-            <div class="w-full lg:w-1/2 space-y-6">
-              <div class="relative">
-                <!-- Watermark Style Number -->
-                <h2
-                  class="text-8xl md:text-[9rem] font-black text-slate-100 absolute -top-12 md:-top-16 -left-4 md:-left-6 z-0 pointer-events-none select-none"
-                >
-                  03
-                </h2>
-                <h3
-                  class="text-3xl font-bold text-slate-800 relative z-10 pt-4"
-                >
-                  Web Himpunan Mahasiswa Sistem Informasi - Universitas
-                  Siliwangi
-                </h3>
-              </div>
-
-              <p class="text-slate-600 leading-relaxed relative z-10">
-                Website profil Himpunan Mahasiswa Sistem Informasi Universitas
-                Siliwangi yang dikembangkan sebagai media informasi organisasi
-                bagi mahasiswa. Website ini menampilkan informasi mengenai
-                profil himpunan, struktur kepengurusan, program kerja, serta
-                berbagai kegiatan yang diselenggarakan oleh HMSI. Sistem
-                dirancang dengan tampilan responsif dan antarmuka yang sederhana
-                agar mudah diakses oleh mahasiswa.
-              </p>
-
-              <div class="flex flex-col gap-3 relative z-10">
-                <span
-                  class="text-sm font-bold text-slate-400 uppercase tracking-wider"
-                  >Tech Stack</span
-                >
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
-                    >PHP</span
-                  >
-                  <span
-                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
-                    >Laravel</span
-                  >
-                  <span
-                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
-                    >Tailwind CSS</span
-                  >
-                  <span
-                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
-                    >MySQL</span
-                  >
-                </div>
-              </div>
-
-              <div class="flex gap-4 pt-4 relative z-10">
-                <a
-                  href="https://github.com/PramAhmad/hsmi"
-                  class="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-sm"
-                  target="_blank"
-                >
-                  <box-icon
-                    type="logo"
-                    name="github"
-                    color="currentColor"
-                  ></box-icon>
-                </a>
-              </div>
-            </div>
-
-            <!-- Right Content (Image) -->
-            <div class="w-full lg:w-1/2 relative group mt-8 lg:mt-0">
-              <!-- Glow background -->
-              <div
-                class="absolute inset-0 bg-sky-200 rounded-2xl blur-xl opacity-50 transform group-hover:scale-105 transition-transform duration-500"
-              ></div>
-              <!-- Image -->
-              <img
-                src="img/project3.png"
-                alt="Project Preview 3"
-                class="relative rounded-2xl shadow-lg border border-slate-200 w-full h-auto object-cover transform group-hover:-translate-y-2 transition-transform duration-500"
-              />
-            </div>
-          </div>
-
-          <!-- ================= SLIDE 4 ================= -->
-          <div
-            class="project-slide hidden flex-col lg:flex-row items-center gap-10 lg:gap-16"
-            id="slide-3"
-          >
-            <!-- Left Content -->
-            <div class="w-full lg:w-1/2 space-y-6">
-              <div class="relative">
-                <!-- Watermark Style Number -->
-                <h2
-                  class="text-8xl md:text-[9rem] font-black text-slate-100 absolute -top-12 md:-top-16 -left-4 md:-left-6 z-0 pointer-events-none select-none"
-                >
-                  04
-                </h2>
-                <h3
-                  class="text-3xl font-bold text-slate-800 relative z-10 pt-4"
-                >
-                  SABUKU (Satu Bulan, Satu Buku) <br />
-                  HMSI - Unsil
-                </h3>
-              </div>
-
-              <p class="text-slate-600 leading-relaxed relative z-10">
-                Website SABUKU (Satu Bulan Satu Buku) yang dikembangkan untuk
-                mendukung program literasi Himpunan Mahasiswa Sistem Informasi
-                Universitas Siliwangi. Platform ini memungkinkan mahasiswa
-                melihat daftar buku, mengirimkan review bacaan, serta
-                menampilkan kumpulan review dalam galeri literasi. Sistem
-                dirancang dengan antarmuka yang responsif dan mudah digunakan
-                untuk mendorong partisipasi mahasiswa dalam kegiatan membaca dan
-                berbagi wawasan.
-              </p>
-
-              <div class="flex flex-col gap-3 relative z-10">
-                <span
-                  class="text-sm font-bold text-slate-400 uppercase tracking-wider"
-                  >Tech Stack</span
-                >
-                <div class="flex flex-wrap gap-2">
-                  <span
-                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
-                    >Python</span
-                  >
-                  <span
-                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
-                    >Django</span
-                  >
-                  <span
-                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
-                    >Tailwind CSS</span
-                  >
-                  <span
-                    class="px-3 py-1.5 bg-sky-50 text-sky-600 rounded-lg text-sm font-medium border border-green-100"
-                    >SQLite</span
-                  >
-                </div>
-              </div>
-
-              <div class="flex gap-4 pt-4 relative z-10">
-                <a
-                  href="https://github.com/AzfaHuwaiza/Sabuku"
-                  class="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all shadow-sm"
-                  target="_blank"
-                >
-                  <box-icon
-                    type="logo"
-                    name="github"
-                    color="currentColor"
-                  ></box-icon>
-                </a>
-              </div>
-            </div>
-
-            <!-- Right Content (Image) -->
-            <div class="w-full lg:w-1/2 relative group mt-8 lg:mt-0">
-              <!-- Glow background -->
-              <div
-                class="absolute inset-0 bg-sky-200 rounded-2xl blur-xl opacity-50 transform group-hover:scale-105 transition-transform duration-500"
-              ></div>
-              <!-- Image -->
-              <img
-                src="img/project4.png"
-                alt="Project Preview 3"
-                class="relative rounded-2xl shadow-lg border border-slate-200 w-full h-auto object-cover transform group-hover:-translate-y-2 transition-transform duration-500"
-              />
-            </div>
-          </div>
-        </div>
-        <!-- End Slider Container -->
-
-        <!-- Navigation Buttons -->
-        <div class="flex justify-start lg:justify-end gap-3 mt-12 lg:mt-16">
-          <button
-            onclick="prevProject()"
-            class="w-12 h-12 bg-white border border-slate-200 shadow-sm rounded-full hover:border-sky-600 hover:text-sky-600 flex items-center justify-center text-slate-400 transition-all"
-          >
-            <box-icon name="chevron-left" color="currentColor"></box-icon>
-          </button>
-          <button
-            onclick="nextProject()"
-            class="w-12 h-12 bg-sky-600 shadow-md shadow-sky-600/20 rounded-full hover:bg-sky-700 flex items-center justify-center text-white transition-all"
-          >
-            <box-icon name="chevron-right" color="currentColor"></box-icon>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio Section End -->
-
-    <!-- Contact Section Start -->
-
-    <section
-      id="contact"
-      class="py-20 lg:py-32 bg-slate-50 border-t border-slate-200"
-    >
-      <div class="max-w-screen-xl mx-auto px-6">
-        <h2
-          class="text-4xl lg:text-5xl font-extrabold text-slate-800 mb-12 text-center lg:text-left"
-        >
-          Get In <span class="text-sky-600">Touch</span>
-        </h2>
-
-        <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
-          <!-- Contact Info (Left) -->
-          <div class="w-full lg:w-5/12 space-y-8">
-            <p class="text-slate-600 leading-relaxed text-lg">
-              Apakah kamu punya ide proyek, peluang kerja sama, atau sekadar
-              ingin menyapa? Jangan ragu untuk menghubungi saya melalui kontak
-              di bawah atau kirimkan pesan melalui formulir!
-            </p>
-
-            <div class="space-y-6">
-              <!-- Email -->
-              <div class="flex items-center gap-4 group">
                 <div
-                  class="w-14 h-14 bg-white border border-slate-200 shadow-sm text-sky-600 rounded-full flex items-center justify-center shrink-0 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300"
+                  class="absolute -left-[49px] w-5 h-5 rounded-full bg-accent border-4 border-white dark:border-navy-900"
+                ></div>
+                <span
+                  class="text-xs font-bold text-accent uppercase tracking-widest"
+                  >Jun 2025 – Des 2025</span
                 >
-                  <box-icon name="envelope" color="currentColor"></box-icon>
-                </div>
-                <div>
-                  <h4
-                    class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1"
-                  >
-                    Email
-                  </h4>
-                  <a
-                    href="mailto:mazfahuwaiza@gmail.com"
-                    class="text-lg font-semibold text-slate-800 hover:text-sky-600 transition-colors"
-                    >mazfahuwaiza@gmail.com</a
-                  >
-                </div>
+                <h3 class="text-xl font-bold mt-2">Co-Fasilitator</h3>
+                <p class="text-slate-500 font-medium italic">
+                  Sakata Innovation Center, Tasikmalaya
+                </p>
+                <ul
+                  class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 list-disc pl-4"
+                >
+                  <li>
+                    Koordinasi multi-stakeholder melibatkan sekolah, guru, dan
+                    otoritas pendidikan.
+                  </li>
+                  <li>
+                    Mendukung perencanaan dan eksekusi program pendidikan AI dan
+                    coding.
+                  </li>
+                  <li>
+                    Meningkatkan pemahaman instruksional guru sebesar 85%
+                    melalui mentoring terstruktur.
+                  </li>
+                  <li>
+                    Mencapai tingkat kelulusan sertifikasi 90% bagi guru
+                    peserta.
+                  </li>
+                </ul>
               </div>
 
-              <!-- Phone/WA -->
-              <div class="flex items-center gap-4 group">
+              <!-- Antarestar (Updated from CV) -->
+              <div class="relative">
                 <div
-                  class="w-14 h-14 bg-white border border-slate-200 shadow-sm text-sky-600 rounded-full flex items-center justify-center shrink-0 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300"
+                  class="absolute -left-[49px] w-5 h-5 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-navy-900"
+                ></div>
+                <span
+                  class="text-xs font-bold text-slate-400 uppercase tracking-widest"
+                  >Jul 2022 – Okt 2022</span
                 >
-                  <box-icon name="phone" color="currentColor"></box-icon>
-                </div>
-                <div>
-                  <h4
-                    class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1"
-                  >
-                    Phone / WhatsApp
-                  </h4>
-                  <a
-                    href="https://wa.me/6282123824490"
-                    target="_blank"
-                    class="text-lg font-semibold text-slate-800 hover:text-sky-600 transition-colors"
-                    >(+62) 821 2382 4490</a
-                  >
-                </div>
+                <h3 class="text-xl font-bold mt-2">Full-Stack Developer</h3>
+                <p class="text-slate-500 font-medium italic">
+                  Antarestar Outdoor, Bekasi
+                </p>
+                <ul
+                  class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 list-disc pl-4"
+                >
+                  <li>
+                    Mengembangkan
+                    <span class="font-bold text-navy-900 dark:text-white"
+                      >Warehouse Management System</span
+                    >
+                    menggunakan Django untuk pencatatan inventaris.
+                  </li>
+                  <li>
+                    Implementasi fitur CRUD untuk manajemen produk, pemasok, dan
+                    data transaksi.
+                  </li>
+                  <li>
+                    Membangun website e-commerce perusahaan berbasis WordPress
+                    yang responsif.
+                  </li>
+                  <li>Manajemen dan integrasi basis data menggunakan MySQL.</li>
+                </ul>
               </div>
+            </div>
+          </div>
 
-              <!-- Location -->
-              <div class="flex items-center gap-4 group">
-                <div
-                  class="w-14 h-14 bg-white border border-slate-200 shadow-sm text-sky-600 rounded-full flex items-center justify-center shrink-0 group-hover:bg-sky-600 group-hover:text-white transition-all duration-300"
-                >
-                  <box-icon name="map" color="currentColor"></box-icon>
-                </div>
-                <div>
-                  <h4
-                    class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1"
+          <!-- Education & Achievement (New Achievement from CV) -->
+          <div class="space-y-20">
+            <div data-aos="fade-up" data-aos-delay="200">
+              <h2 class="text-3xl font-black mb-12 flex items-center gap-4">
+                <i data-lucide="graduation-cap" class="text-accent"></i>
+                Pendidikan
+              </h2>
+              <div class="relative pl-10 space-y-12">
+                <div class="timeline-line"></div>
+
+                <!-- UNSIL -->
+                <div class="relative">
+                  <div
+                    class="absolute -left-[49px] w-5 h-5 rounded-full bg-accent border-4 border-white dark:border-navy-900"
+                  ></div>
+                  <span
+                    class="text-xs font-bold text-accent uppercase tracking-widest"
+                    >Agt 2023 – Sekarang</span
                   >
-                    Location
-                  </h4>
-                  <p class="text-lg font-semibold text-slate-800">
-                    Tasikmalaya, Indonesia
+                  <h3 class="text-xl font-bold mt-2">Universitas Siliwangi</h3>
+                  <p class="text-slate-500 font-medium">S1 Sistem Informasi</p>
+                  <p
+                    class="mt-2 font-bold text-sm text-navy-900 dark:text-white"
+                  >
+                    GPA: 3.81/4.00 (Current)
+                  </p>
+                </div>
+
+                <!-- SMK -->
+                <div class="relative">
+                  <div
+                    class="absolute -left-[49px] w-5 h-5 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-navy-900"
+                  ></div>
+                  <span
+                    class="text-xs font-bold text-slate-400 uppercase tracking-widest"
+                    >Jul 2020 – Mei 2023</span
+                  >
+                  <h3 class="text-xl font-bold mt-2">SMKN 4 Tasikmalaya</h3>
+                  <p class="text-slate-500 font-medium">
+                    Rekayasa Perangkat Lunak (Software Engineering)
                   </p>
                 </div>
               </div>
             </div>
 
+            <!-- Achievement Highlight -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              class="bg-white dark:bg-navy-950 p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm"
+            >
+              <h3 class="text-xl font-black mb-6 flex items-center gap-3">
+                <i data-lucide="award" class="text-yellow-500"></i> Prestasi
+                Utama
+              </h3>
+              <div class="space-y-4">
+                <div class="p-4 bg-slate-50 dark:bg-navy-900 rounded-2xl">
+                  <h4 class="font-bold text-navy-900 dark:text-white">
+                    Juara 1 Lomba Kompetensi Siswa (LKS)
+                  </h4>
+                  <p class="text-xs text-slate-500 uppercase tracking-widest">
+                    Bidang Web Technology • Kota Tasikmalaya • 2022
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organizational Experience (New Section from CV) -->
+    <section class="py-24 px-6 bg-white dark:bg-navy-950">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-black mb-16 text-center" data-aos="fade-up">
+          Organisasi
+        </h2>
+        <div
+          class="bg-slate-50 dark:bg-navy-900 p-8 lg:p-12 rounded-[3rem] border border-slate-100 dark:border-slate-800"
+          data-aos="fade-up"
+        >
+          <div
+            class="flex flex-col md:flex-row justify-between items-start mb-8 gap-4"
+          >
+            <div>
+              <h3 class="text-2xl font-black text-navy-900 dark:text-white">
+                HMSI Universirtas Siliwangi
+              </h3>
+              <p class="text-accent font-bold">Anggota Divisi Pendidikan</p>
+            </div>
+            <span
+              class="px-4 py-2 bg-white dark:bg-navy-950 rounded-full text-xs font-bold shadow-sm"
+              >Mar 2025 – Des 2025</span
+            >
+          </div>
+          <ul
+            class="grid md:grid-cols-2 gap-6 text-sm text-slate-600 dark:text-slate-400"
+          >
+            <li class="flex gap-3">
+              <i data-lucide="check-circle" class="text-accent shrink-0"></i>
+              Merencanakan program akademik dan edukasi bagi mahasiswa Sistem
+              Informasi.
+            </li>
+            <li class="flex gap-3">
+              <i data-lucide="check-circle" class="text-accent shrink-0"></i>
+              Berkontribusi pada inisiatif pengembangan literasi dan berbagi
+              pengetahuan.
+            </li>
+            <li class="flex gap-3">
+              <i data-lucide="check-circle" class="text-accent shrink-0"></i>
+              Kolaborasi tim untuk koordinasi acara dan dokumentasi program.
+            </li>
+            <li class="flex gap-3">
+              <i data-lucide="check-circle" class="text-accent shrink-0"></i>
+              Partisipasi dalam diskusi strategis untuk meningkatkan efektivitas
+              program.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills (Categorized from CV) -->
+    <section id="skills" class="py-24 bg-slate-50 dark:bg-navy-900/50">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-black mb-16" data-aos="fade-up">
+          Technical Skills
+        </h2>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
+        >
+          <!-- Repeated for all skills from original -->
+          <div
+            class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
+            data-aos="zoom-in"
+          >
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-256/free-html-logo-icon-svg-download-png-3030115.png"
+              class="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
+              alt="HTML"
+            />
+            <p class="font-bold text-sm text-navy uppercase tracking-widest">
+              HTML5
+            </p>
+          </div>
+          <div
+            class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
+            data-aos="zoom-in"
+            data-aos-delay="50"
+          >
+            <img
+              src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon~old.svg"
+              class="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
+              alt="CSS"
+            />
+            <p class="font-bold text-sm text-navy uppercase tracking-widest">
+              CSS3
+            </p>
+          </div>
+          <div
+            class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <img
+              src="https://www.svgrepo.com/show/303206/javascript-logo.svg"
+              class="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
+              alt="JS"
+            />
+            <p class="font-bold text-sm text-navy uppercase tracking-widest">
+              JS
+            </p>
+          </div>
+          <div
+            class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
+            data-aos="zoom-in"
+            data-aos-delay="150"
+          >
+            <img
+              src="https://www.svgrepo.com/show/452091/python.svg"
+              class="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
+              alt="Python"
+            />
+            <p class="font-bold text-sm text-navy uppercase tracking-widest">
+              Python
+            </p>
+          </div>
+          <div
+            class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <img
+              src="https://www.svgrepo.com/show/373554/django.svg"
+              class="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
+              alt="Django"
+            />
+            <p class="font-bold text-sm text-navy uppercase tracking-widest">
+              Django
+            </p>
+          </div>
+          <div
+            class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
+            data-aos="zoom-in"
+            data-aos-delay="250"
+          >
+            <img
+              src="https://www.svgrepo.com/show/452202/figma.svg"
+              class="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
+              alt="Figma"
+            />
+            <p class="font-bold text-sm text-navy uppercase tracking-widest">
+              Figma
+            </p>
+          </div>
+          <!-- ... All other skills ... -->
+          <div
+            class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <img
+              src="https://www.svgrepo.com/show/473731/mysql.svg"
+              class="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
+              alt="MySQL"
+            />
+            <p class="font-bold text-sm text-navy uppercase tracking-widest">
+              MySQL
+            </p>
+          </div>
+          <div
+            class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
+            data-aos="zoom-in"
+            data-aos-delay="350"
+          >
+            <img
+              src="https://www.svgrepo.com/show/374118/tailwind.svg"
+              class="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
+              alt="Tailwind"
+            />
+            <p class="font-bold text-sm text-navy uppercase tracking-widest">
+              Tailwind
+            </p>
+          </div>
+          <div
+            class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <img
+              src="https://www.svgrepo.com/show/452088/php.svg"
+              class="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
+              alt="PHP"
+            />
+            <p class="font-bold text-sm text-navy uppercase tracking-widest">
+              PHP
+            </p>
+          </div>
+          <div
+            class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
+            data-aos="zoom-in"
+            data-aos-delay="450"
+          >
+            <img
+              src="https://www.svgrepo.com/show/353985/laravel.svg"
+              class="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
+              alt="Laravel"
+            />
+            <p class="font-bold text-sm text-navy uppercase tracking-widest">
+              Laravel
+            </p>
+          </div>
+          <div
+            class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/960px-GitHub_Invertocat_Logo.svg.png"
+              class="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
+              alt="GitHub"
+            />
+            <p class="font-bold text-sm text-navy uppercase tracking-widest">
+              GitHub
+            </p>
+          </div>
+          <div
+            class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
+            data-aos="zoom-in"
+            data-aos-delay="550"
+          >
+            <img
+              src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/canva-icon.png"
+              class="w-12 h-12 mx-auto mb-4 group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
+              alt="Canva"
+            />
+            <p class="font-bold text-sm text-navy uppercase tracking-widest">
+              Canva
+            </p>
+          </div>
+        </div>
+
+        <!-- Other Skills from CV -->
+        <div
+          class="mt-12 flex flex-wrap justify-center gap-4"
+          data-aos="fade-up"
+        >
+          <span
+            class="px-6 py-3 bg-white dark:bg-navy-950 rounded-2xl border border-slate-100 dark:border-slate-800 font-bold text-sm shadow-sm"
+            >Data Analysis</span
+          >
+          <span
+            class="px-6 py-3 bg-white dark:bg-navy-950 rounded-2xl border border-slate-100 dark:border-slate-800 font-bold text-sm shadow-sm"
+            >REST API Development</span
+          >
+          <span
+            class="px-6 py-3 bg-white dark:bg-navy-950 rounded-2xl border border-slate-100 dark:border-slate-800 font-bold text-sm shadow-sm"
+            >Machine Learning (Basic)</span
+          >
+          <span
+            class="px-6 py-3 bg-white dark:bg-navy-950 rounded-2xl border border-slate-100 dark:border-slate-800 font-bold text-sm shadow-sm"
+            >Jupyter Notebook</span
+          >
+          <span
+            class="px-6 py-3 bg-white dark:bg-navy-950 rounded-2xl border border-slate-100 dark:border-slate-800 font-bold text-sm shadow-sm"
+            >Git & GitHub</span
+          >
+          <span
+            class="px-6 py-3 bg-white dark:bg-navy-950 rounded-2xl border border-slate-100 dark:border-slate-800 font-bold text-sm shadow-sm"
+            >Figma & Canva</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section (Interactive Cards) -->
+    <section id="portfolio" class="py-24 px-6 bg-white dark:bg-navy-950">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-black mb-4">Latest Projects</h2>
+          <div class="w-20 h-1.5 bg-accent mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+          <!-- Project 1 (WMS) -->
+          <div
+            class="group bg-slate-50 dark:bg-navy-900 rounded-[3rem] overflow-hidden border border-slate-100 dark:border-slate-800"
+            data-aos="fade-up"
+          >
+            <div class="relative overflow-hidden aspect-video">
+              <img
+                src="img/project1.png"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="WMS Project"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4"
+              >
+                <a
+                  href="https://github.com/AzfaHuwaiza/ecommerce-plastic-shop"
+                  target="_blank"
+                  class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-navy-900 hover:bg-accent hover:text-white transition-all"
+                  ><i data-lucide="external-link"></i
+                ></a>
+              </div>
+            </div>
+            <div class="p-10">
+              <div class="flex gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-accent text-[10px] font-black uppercase rounded-lg tracking-widest"
+                  >Django</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-accent text-[10px] font-black uppercase rounded-lg tracking-widest"
+                  >MySQL</span
+                >
+              </div>
+              <h3 class="text-2xl font-bold mb-4">
+                Warehouse Management System
+              </h3>
+              <p class="text-sm text-slate-500 leading-relaxed">
+                Website e-commerce untuk produk kemasan plastik thinwall dengan
+                sistem pembayaran COD dan manajemen produk terintegrasi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 2 (SIAKAD) -->
+          <div
+            class="group bg-slate-50 dark:bg-navy-900 rounded-[3rem] overflow-hidden border border-slate-100 dark:border-slate-800"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="relative overflow-hidden aspect-video">
+              <img
+                src="img/project2.png"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="SIAKAD Project"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4"
+              >
+                <a
+                  href="https://github.com/AzfaHuwaiza/tkit_ibadurrohman"
+                  target="_blank"
+                  class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-navy-900 hover:bg-accent hover:text-white transition-all"
+                  ><i data-lucide="external-link"></i
+                ></a>
+              </div>
+            </div>
+            <div class="p-10">
+              <div class="flex gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-accent text-[10px] font-black uppercase rounded-lg tracking-widest"
+                  >Django</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-accent text-[10px] font-black uppercase rounded-lg tracking-widest"
+                  >Tailwind</span
+                >
+              </div>
+              <h3 class="text-2xl font-bold mb-4">SIAKAD TK IT Ibadurrohman</h3>
+              <p class="text-sm text-slate-500 leading-relaxed">
+                Sistem Informasi Akademik untuk pengelolaan data siswa, guru,
+                dan administrasi sekolah di TK IT Ibadurrohman.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 3 (HMSI UNSIL) -->
+          <div
+            class="group bg-slate-50 dark:bg-navy-900 rounded-[3rem] overflow-hidden border border-slate-100 dark:border-slate-800"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="relative overflow-hidden aspect-video">
+              <img
+                src="img/project3.png"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="HMSI Project"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4"
+              >
+                <a
+                  href="https://github.com/AzfaHuwaiza/tkit_ibadurrohman"
+                  target="_blank"
+                  class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-navy-900 hover:bg-accent hover:text-white transition-all"
+                  ><i data-lucide="external-link"></i
+                ></a>
+              </div>
+            </div>
+            <div class="p-10">
+              <div class="flex gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-accent text-[10px] font-black uppercase rounded-lg tracking-widest"
+                  >Laravel</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-accent text-[10px] font-black uppercase rounded-lg tracking-widest"
+                  >PHP</span
+                >
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Web HMSI UNSIL</h3>
+              <p class="text-sm text-slate-500 leading-relaxed">
+                Website profil Himpunan Mahasiswa Sistem Informasi Universitas
+                Siliwangi sebagai media informasi organisasi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 4 (SABUKU) -->
+          <div
+            class="group bg-slate-50 dark:bg-navy-900 rounded-[3rem] overflow-hidden border border-slate-100 dark:border-slate-800"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="relative overflow-hidden aspect-video">
+              <img
+                src="img/project4.png"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                alt="SABUKU Project"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4"
+              >
+                <a
+                  href="https://github.com/AzfaHuwaiza/tkit_ibadurrohman"
+                  target="_blank"
+                  class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-navy-900 hover:bg-accent hover:text-white transition-all"
+                  ><i data-lucide="external-link"></i
+                ></a>
+              </div>
+            </div>
+            <div class="p-10">
+              <div class="flex gap-2 mb-4">
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-accent text-[10px] font-black uppercase rounded-lg tracking-widest"
+                  >Django</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-accent text-[10px] font-black uppercase rounded-lg tracking-widest"
+                  >SQLite</span
+                >
+              </div>
+              <h3 class="text-2xl font-bold mb-4">SABUKU Platform</h3>
+              <p class="text-sm text-slate-500 leading-relaxed">
+                Platform literasi untuk program "Satu Bulan Satu Buku" yang
+                memungkinkan pengiriman review bacaan mahasiswa.
+              </p>
+            </div>
+          </div>
+
+          <!-- Other projects from original portfolio included here... -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Development & Certifications (Searchable) -->
+    <section class="py-24 bg-slate-50 dark:bg-navy-900/50 px-6 min-h-screen">
+      <div class="max-w-7xl mx-auto">
+        <!-- Header & Search -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8"
+        >
+          <div data-aos="fade-right">
+            <h2 class="text-4xl font-black mb-4">Certifications</h2>
+            <p class="text-slate-500 dark:text-slate-400">
+              Pencapaian profesional dan pengembangan diri terbaru.
+            </p>
+          </div>
+          <div class="w-full md:w-96 relative" data-aos="fade-left">
+            <i
+              data-lucide="search"
+              class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5"
+            ></i>
+            <input
+              type="text"
+              id="certSearch"
+              placeholder="Cari sertifikat (Python, Web, AI...)"
+              class="w-full pl-12 pr-6 py-4 rounded-2xl bg-white dark:bg-navy-950 border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-accent outline-none text-slate-800 dark:text-white transition-all shadow-sm"
+            />
+          </div>
+        </div>
+
+        <!-- Newest from CV (Highlight) -->
+        <div
+          class="mb-12 p-8 bg-accent rounded-[2.5rem] text-white flex flex-col md:flex-row items-center gap-8 shadow-xl shadow-accent/20"
+          data-aos="fade-up"
+        >
+          <div
+            class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shrink-0"
+          >
+            <img
+              src="img/dbs-foundation.png"
+              class="w-12 object-contain"
+              alt="DBS Foundation"
+            />
+          </div>
+          <div>
+            <span
+              class="text-xs font-black uppercase tracking-widest opacity-80"
+              >Feb 2026 – Present</span
+            >
+            <h3 class="text-2xl font-black mt-1">Data Science Learning Path</h3>
+            <p class="font-medium opacity-90">
+              DBS Foundation Coding Camp x Dicoding Indonesia
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 bg-white/20 rounded-full text-[10px] font-bold uppercase tracking-widest"
+                >SQL</span
+              >
+              <span
+                class="px-3 py-1 bg-white/20 rounded-full text-[10px] font-bold uppercase tracking-widest"
+                >Python</span
+              >
+              <span
+                class="px-3 py-1 bg-white/20 rounded-full text-[10px] font-bold uppercase tracking-widest"
+                >Machine Learning</span
+              >
+            </div>
+          </div>
+          <div class="md:ml-auto w-full md:w-auto mt-4 md:mt-0">
+            <a
+              href="https://www.dicoding.com"
+              target="_blank"
+              class="px-6 py-3 bg-white text-accent rounded-xl font-bold text-sm text-center block hover:bg-slate-50 transition-colors shadow-sm"
+            >
+              Detail Program
+            </a>
+          </div>
+        </div>
+
+        <!-- Certification Grid (All items in one grid for perfect layout flow) -->
+        <div
+          id="certContainer"
+          class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-500"
+        >
+          <!-- Cert 16 (Visible Default) -->
+          <div
+            class="cert-card flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+            data-aos="fade-up"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Belajar Matematika untuk Data Science.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x400/0f172a/ffffff?text=Certificate'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="http://dicoding.com/certificates/N9ZONLG76XG5"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >29 Mei 2026 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Matematika untuk Data Science
+            </h4>
+          </div>
+
+          <!-- Cert 15 (Visible Default) -->
+          <div
+            class="cert-card flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Belajar Dasar AI.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x400/0f172a/ffffff?text=Certificate'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="https://dicoding.com/certificates/N9ZON92V6XG5"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >29 April 2026 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Belajar Dasar AI
+            </h4>
+          </div>
+
+          <!-- Cert 14 (Visible Default) -->
+          <div
+            class="cert-card flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Belajar Fundamental Pemrosesan Data.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x400/0f172a/ffffff?text=Certificate'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="http://dicoding.com/certificates/L4PQ9E5N2PO1"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >28 April 2026 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Belajar Fundamental Pemrosesan Data
+            </h4>
+          </div>
+
+          <!-- Cert 13 (Visible Default) -->
+          <div
+            class="cert-card flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Belajar Fundamental Analisis Data.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+                onerror="
+                  this.src =
+                    'https://placehold.co/600x400/0f172a/ffffff?text=Certificate'
+                "
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="https://dicoding.com/certificates/6RPN7YVV8X2M"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >18 April 2026 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Belajar Fundamental Analisis Data
+            </h4>
+          </div>
+
+          <!-- Cert 12 (Hidden initially via 'hidden' class) -->
+          <div
+            class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Belajar Machine Lerarning untuk Pemula.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="http://dicoding.com/certificates/MRZMWLR7RPYQ"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >27 Maret 2026 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Belajar Machine Learning untuk Pemula
+            </h4>
+          </div>
+
+          <!-- Cert 11 -->
+          <div
+            class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Memulai Pemrograman dengan Python.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="http://dicoding.com/certificates/JLX1VGQ9NZ72"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >28 Februari 2026 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Memulai Pemrograman dengan Python
+            </h4>
+          </div>
+
+          <!-- Cert 10 -->
+          <div
+            class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Belajar Dasar Visualisasi Data.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="http://dicoding.com/certificates/98XW0K47LXM3"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >19 Februari 2026 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Belajar Dasar Visualisasi Data
+            </h4>
+          </div>
+
+          <!-- Cert 9 -->
+          <div
+            class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Belajar Dasar Data Science.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="http://dicoding.com/certificates/1OP8RD3JVZQK"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >17 Februari 2026 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Belajar Dasar Data Science
+            </h4>
+          </div>
+
+          <!-- Cert 8 -->
+          <div
+            class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Belajar Dasar Git dengan GitHub.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="http://dicoding.com/certificates/6RPN73M48X2M"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >14 Februari 2026 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Belajar Dasar Git dengan GitHub
+            </h4>
+          </div>
+
+          <!-- Cert 7 -->
+          <div
+            class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Pengenalan ke Logika Pemrograman (Programming Logic 101).png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="https://www.dicoding.com/certificates/ERZRL9462ZYV"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >10 Februari 2026 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Pengenalan ke Logika Pemrograman (Programming Logic 101)
+            </h4>
+          </div>
+
+          <!-- Cert 6 -->
+          <div
+            class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Memulai Dasar Pemrograman untuk Menjadi Pengembang Software.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="https://www.dicoding.com/certificates/GRX5J5V3YX0M"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >9 Februari 2026 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Memulai Dasar Pemrograman untuk Menjadi Pengembang Software
+            </h4>
+          </div>
+
+          <!-- Cert 5 -->
+          <div
+            class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Introduction to Financial Literacy.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="https://dicoding.com/certificates/JMZVVR2G3ZN9"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >11 Januari 2026 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Introduction to Financial Literacy
+            </h4>
+          </div>
+
+          <!-- Cert 4 -->
+          <div
+            class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Belajar Dasar Pemrograman Web.png"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="http://dicoding.com/certificates/2VX36Q0KNXYQ"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >18 November 2023 | Dicoding</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Belajar Dasar Pemrograman Web
+            </h4>
+          </div>
+
+          <!-- Cert 3 -->
+          <div
+            class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Fundamental Algoritma.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="https://member.codingstudio.id/certificate/uONAXyM087"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >20 Desember 2024 | Coding Studio</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Fundamental Algoritma
+            </h4>
+          </div>
+
+          <!-- Cert 2 -->
+          <div
+            class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Fundamental Database MySQL.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="https://member.codingstudio.id/certificate/tm8VyPuzEg"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >25 Desember 2024 | Coding Studio</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Fundamental Database MySQL
+            </h4>
+          </div>
+
+          <!-- Cert 1 -->
+          <div
+            class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
+          >
+            <div
+              class="aspect-video mb-6 overflow-hidden rounded-2xl relative bg-slate-100 dark:bg-slate-800"
+            >
+              <img
+                src="img/Sertifikat Fundamental Python.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt="Cert"
+              />
+              <div
+                class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <a
+                  href="https://member.codingstudio.id/certificate/Xvc0ts49JT"
+                  target="_blank"
+                  class="p-3 bg-white text-navy-900 rounded-full hover:scale-110 transition-transform"
+                  ><i data-lucide="external-link" class="w-5 h-5"></i
+                ></a>
+              </div>
+            </div>
+            <span
+              class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
+              >25 Desember 2024 | Coding Studio</span
+            >
+            <h4
+              class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
+            >
+              Fundamental Python
+            </h4>
+          </div>
+        </div>
+
+        <!-- Toggle Show More / Show Less Button -->
+        <div class="mt-16 text-center" id="toggleWrapper">
+          <button
+            id="toggleCerts"
+            class="px-8 py-4 bg-navy-900 text-white font-bold rounded-2xl hover:bg-accent hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 mx-auto"
+          >
+            <span id="toggleText">Lihat Seluruh Sertifikat (16)</span>
+            <span id="toggleIconContainer">
+              <i data-lucide="chevron-down" class="w-5 h-5"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <section id="contact" class="py-24 px-6 bg-white dark:bg-navy-950">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
+        <div data-aos="fade-right">
+          <h2 class="text-4xl font-black mb-8">
+            Get In <span class="text-accent">Touch.</span>
+          </h2>
+          <p class="text-slate-500 dark:text-slate-400 text-lg mb-12">
+            Siap untuk kolaborasi dalam proyek baru atau sekadar menyapa?
+            Hubungi saya melalui media berikut.
+          </p>
+
+          <div class="space-y-6">
+            <div
+              class="flex items-center gap-6 p-6 bg-slate-50 dark:bg-navy-900 rounded-3xl group hover:bg-accent transition-colors"
+            >
+              <div
+                class="w-14 h-14 bg-white dark:bg-navy-950 rounded-2xl flex items-center justify-center text-accent group-hover:text-accent shadow-sm"
+              >
+                <i data-lucide="mail"></i>
+              </div>
+              <div>
+                <p
+                  class="text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:text-white/70"
+                >
+                  Email
+                </p>
+                <a
+                  href="mailto:mazfahuwaiza@gmail.com"
+                  target="_blank"
+                  class="text-lg font-bold group-hover:text-white"
+                  >mazfahuwaiza@gmail.com</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-6 p-6 bg-slate-50 dark:bg-navy-900 rounded-3xl group hover:bg-accent transition-colors"
+            >
+              <div
+                class="w-14 h-14 bg-white dark:bg-navy-950 rounded-2xl flex items-center justify-center text-accent group-hover:text-accent shadow-sm"
+              >
+                <i data-lucide="phone"></i>
+              </div>
+              <div>
+                <p
+                  class="text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:text-white/70"
+                >
+                  WhatsApp
+                </p>
+                <a
+                  href="https://wa.me/6282123824490"
+                  target="_blank"
+                  class="text-lg font-bold group-hover:text-white"
+                  >(+62) 821 2382 4490</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-6 p-6 bg-slate-50 dark:bg-navy-900 rounded-3xl group hover:bg-accent transition-colors"
+            >
+              <div
+                class="w-14 h-14 bg-white dark:bg-navy-950 rounded-2xl flex items-center justify-center text-accent group-hover:text-accent shadow-sm"
+              >
+                <i data-lucide="map"></i>
+              </div>
+              <div>
+                <p
+                  class="text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:text-white/70"
+                >
+                  Location
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/Uh3Wt7eaa1KETxWe6"
+                  target="_blank"
+                  class="text-lg font-bold group-hover:text-white"
+                  >Tasikmalaya, Indonesia</a
+                >
+              </div>
+            </div>
             <!-- Social Media -->
             <div class="pt-8 border-t border-slate-200">
               <h4
@@ -2165,132 +1601,67 @@
               </div>
             </div>
           </div>
-
-          <!-- Contact Form (Right) -->
-          <div class="w-full lg:w-7/12 mt-8 lg:mt-0">
-            <!-- Tambahkan ID ke form biar bisa dipanggil dari JavaScript -->
-            <form
-              id="contactForm"
-              action="#"
-              class="bg-white p-8 lg:p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-200 space-y-6 relative overflow-hidden"
-            >
-              <!-- Hiasan Blur Background -->
-              <div
-                class="absolute -top-20 -right-20 w-40 h-40 bg-sky-200 rounded-full blur-3xl opacity-30 pointer-events-none"
-              ></div>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
-                <!-- Name -->
-                <div>
-                  <label
-                    for="name"
-                    class="block text-sm font-bold text-slate-700 mb-2"
-                    >Nama Anda</label
-                  >
-                  <input
-                    type="text"
-                    id="name"
-                    required
-                    class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500/50 focus:border-sky-500 transition-all"
-                    placeholder="Azfa Huwaiza"
-                  />
-                </div>
-                <!-- Email -->
-                <div>
-                  <label
-                    for="email"
-                    class="block text-sm font-bold text-slate-700 mb-2"
-                    >Email Anda</label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500/50 focus:border-sky-500 transition-all"
-                    placeholder="azfa@example.com"
-                  />
-                </div>
-              </div>
-
-              <!-- Subject -->
-              <div class="relative z-10">
-                <label
-                  for="subject"
-                  class="block text-sm font-bold text-slate-700 mb-2"
-                  >Subjek</label
-                >
-                <input
-                  type="text"
-                  id="subject"
-                  required
-                  class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500/50 focus:border-sky-500 transition-all"
-                  placeholder="Tentukan subjek pesan Anda..."
-                />
-              </div>
-
-              <!-- Message -->
-              <div class="relative z-10">
-                <label
-                  for="message"
-                  class="block text-sm font-bold text-slate-700 mb-2"
-                  >Pesan</label
-                >
-                <textarea
-                  id="message"
-                  rows="5"
-                  required
-                  class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 focus:outline-none focus:ring-2 focus:ring-sky-500/50 focus:border-sky-500 transition-all resize-none"
-                  placeholder="Tulis pesan Anda di sini..."
-                ></textarea>
-              </div>
-
-              <!-- Submit Button -->
-              <div class="relative z-10 pt-2">
-                <button
-                  type="submit"
-                  class="w-full sm:w-auto px-8 py-4 bg-sky-600 text-white font-bold rounded-xl shadow-lg shadow-sky-600/30 hover:bg-sky-700 hover:-translate-y-1 transition-all flex items-center justify-center gap-3"
-                >
-                  Kirim Pesan
-                  <box-icon
-                    type="logo"
-                    name="whatsapp"
-                    color="white"
-                    size="sm"
-                    animation="tada-hover"
-                  ></box-icon>
-                </button>
-              </div>
-            </form>
-          </div>
         </div>
+
+        <form id="contactForm" action="#" class="space-y-4" data-aos="fade-up">
+          <div class="grid md:grid-cols-2 gap-4">
+            <input
+              type="text"
+              id="name"
+              placeholder="Nama Lengkap"
+              required
+              class="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-800 outline-none focus:ring-2 focus:ring-accent transition-all text-slate-800 dark:text-white placeholder-slate-400"
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Email Anda"
+              class="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-800 outline-none focus:ring-2 focus:ring-accent transition-all text-slate-800 dark:text-white placeholder-slate-400"
+            />
+          </div>
+          <input
+            type="text"
+            id="subject"
+            required
+            placeholder="Subjek"
+            class="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-800 outline-none focus:ring-2 focus:ring-accent transition-all text-slate-800 dark:text-white placeholder-slate-400"
+          />
+          <textarea
+            id="message"
+            rows="6"
+            required
+            placeholder="Pesan Anda"
+            class="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-800 outline-none focus:ring-2 focus:ring-accent resize-none transition-all text-slate-800 dark:text-white placeholder-slate-400"
+          ></textarea>
+
+          <!-- Submit Button -->
+          <div class="relative z-10 pt-2 flex justify-end">
+            <button
+              type="submit"
+              class="w-full sm:w-auto px-8 py-4 bg-[#25D366] text-white font-bold rounded-xl shadow-lg shadow-[#25D366]/30 hover:bg-[#128C7E] hover:-translate-y-1 transition-all flex items-center justify-center gap-3"
+            >
+              Kirim via WhatsApp
+              <box-icon
+                type="logo"
+                name="whatsapp"
+                color="white"
+                size="sm"
+                animation="tada-hover"
+              ></box-icon>
+            </button>
+          </div>
+        </form>
       </div>
     </section>
 
-    <!-- Contact Section End -->
-
-    <!-- Footer Start -->
-
-    <footer class="bg-slate-900 py-10">
-      <div class="max-w-screen-xl mx-auto px-6 flex flex-col items-center">
-        <!-- Logo Text -->
-        <a
-          href="/#"
-          class="text-2xl font-bold tracking-tight text-white mb-4 group"
-        >
-          <span
-            class="text-sky-500 transition-colors duration-300 group-hover:text-sky-400"
-            >Azfa</span
-          >
-          <span class="font-light text-slate-400">Portfolio</span>
-        </a>
-        <!-- Copyright -->
-        <p class="text-slate-500 text-sm font-medium text-center">
-          &copy; 2026 Muhammad Azfa Huwaiza Al Aflah. All rights reserved.
-        </p>
-      </div>
+    <footer class="py-12 bg-navy-950 text-white text-center">
+      <p class="text-xs font-bold tracking-widest opacity-50 uppercase">
+        © 2026 Muhammad Azfa Huwaiza Al Aflah • All Rights Reserved
+      </p>
     </footer>
 
-    <!-- Footer End -->
-    <script src="js/script.js"></script>
+    <!-- Scripts for Logic & Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

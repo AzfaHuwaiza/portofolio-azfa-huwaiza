@@ -132,15 +132,53 @@ if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
+    // Mengambil nilai dari input form
+    const name = document.getElementById("name").value.trim();
+    const email =
+      document.getElementById("email").value.trim() || "Tidak disertakan";
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-    const waText = `Halo Azfa!\n\nNama: ${name}\nEmail: ${email}\nSubjek: ${subject}\n\nPesan:\n${message}`;
+    // Menyusun format pesan WhatsApp
+    const waText = `Halo Azfa!\n\n*Nama:* ${name}\n*Email:* ${email}\n*Subjek:* ${subject}\n\n*Pesan:*\n${message}`;
+
+    // Meng-encode teks agar aman dijadikan URL
     const encodedText = encodeURIComponent(waText);
+
+    // Nomor WhatsApp tujuan
     const waNumber = "6282123824490";
 
-    window.open(`https://wa.me/${waNumber}?text=${encodedText}`, "_blank");
+    // URL WhatsApp
+    const waUrl = `https://wa.me/${waNumber}?text=${encodedText}`;
+
+    try {
+      // Mencoba membuka di tab baru
+      const newWindow = window.open(waUrl, "_blank");
+
+      // Cek apakah browser memblokir pop-up
+      if (
+        !newWindow ||
+        newWindow.closed ||
+        typeof newWindow.closed == "undefined"
+      ) {
+        // Jika terblokir, tampilkan peringatan dan link alternatif
+        fallbackLink.href = waUrl;
+        popupWarning.classList.remove("hidden");
+      } else {
+        // Jika berhasil, sembunyikan peringatan (jika sebelumnya muncul)
+        popupWarning.classList.add("hidden");
+
+        // Opsional: Reset form setelah berhasil dikirim
+        contactForm.reset();
+      }
+    } catch (error) {
+      // Menangani error keamanan iFrame (biasanya terjadi di environment preview)
+      console.error("Gagal membuka window:", error);
+      fallbackLink.href = waUrl;
+      popupWarning.classList.remove("hidden");
+
+      // Fallback langsung mengubah URL di halaman saat ini jika open terblokir keras
+      // window.location.href = waUrl;
+    }
   });
 }
