@@ -78,6 +78,7 @@
           AZFA<span class="text-accent"> PORTFOLIO</span>
         </a>
 
+        <!-- Menu Desktop -->
         <div
           class="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-widest"
         >
@@ -93,21 +94,71 @@
           <a href="#contact" class="hover:text-accent transition-colors"
             >Kontak</a
           >
-          <button
-            id="dark-toggle"
-            class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full hover:bg-slate-200 transition-all"
-          >
-            <i data-lucide="sun" id="sun-icon" class="hidden"></i>
-            <i data-lucide="moon" id="moon-icon"></i>
-          </button>
         </div>
 
-        <button class="md:hidden" id="mobile-menu-btn">
-          <i data-lucide="menu"></i>
-        </button>
+        <!-- Container Tombol (Dark Mode + Hamburger) -->
+        <div class="flex items-center gap-4">
+          <!-- Tombol Dark Mode (Sekarang di luar, terlihat di HP & Desktop) -->
+          <button
+            id="dark-toggle"
+            class="p-2.5 bg-slate-100 dark:bg-slate-800 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-all shadow-sm"
+          >
+            <i
+              data-lucide="sun"
+              id="sun-icon"
+              class="hidden w-5 h-5 text-yellow-500"
+            ></i>
+            <i
+              data-lucide="moon"
+              id="moon-icon"
+              class="w-5 h-5 text-navy-900 dark:text-slate-200"
+            ></i>
+          </button>
+
+          <!-- Tombol Menu HP -->
+          <button
+            class="md:hidden p-2 text-navy-900 dark:text-white"
+            id="mobile-menu-btn"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
       </div>
     </nav>
-
+    <!-- Mobile Menu Overlay (Tambahkan ini) -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-[200] bg-white dark:bg-navy-950 translate-x-full transition-transform duration-300 md:hidden"
+    >
+      <div class="flex flex-col h-full">
+        <div
+          class="flex items-center justify-between px-6 h-20 border-b border-slate-100 dark:border-slate-800"
+        >
+          <span class="text-xl font-black text-navy-900 dark:text-white"
+            >MENU</span
+          >
+          <button id="close-menu-btn" class="p-2 text-navy-900 dark:text-white">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <div class="flex flex-col gap-6 p-8 text-2xl font-bold">
+          <a href="#home" class="mobile-link text-navy-900 dark:text-white"
+            >Beranda</a
+          >
+          <a
+            href="#experience"
+            class="mobile-link text-navy-900 dark:text-white"
+            >Resume</a
+          >
+          <a href="#portfolio" class="mobile-link text-navy-900 dark:text-white"
+            >Proyek</a
+          >
+          <a href="#contact" class="mobile-link text-navy-900 dark:text-white"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </div>
     <!-- Hero Section -->
     <section id="home" class="pt-40 pb-20 px-6 relative overflow-hidden">
       <div
