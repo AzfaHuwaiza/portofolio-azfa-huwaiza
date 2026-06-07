@@ -1,4 +1,11 @@
 /* Animasi garis bawah navbar saat hover */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 .nav-link::after {
   content: "";
   display: block;
