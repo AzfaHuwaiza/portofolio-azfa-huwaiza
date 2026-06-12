@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="id" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -78,27 +78,25 @@
           AZFA<span class="text-accent"> PORTFOLIO</span>
         </a>
 
-        <!-- Menu Desktop -->
+        <!-- Desktop Menu -->
         <div
           class="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-widest"
         >
-          <a href="#home" class="hover:text-accent transition-colors"
-            >Beranda</a
-          >
+          <a href="#home" class="hover:text-accent transition-colors">Home</a>
           <a href="#experience" class="hover:text-accent transition-colors"
             >Resume</a
           >
           <a href="#portfolio" class="hover:text-accent transition-colors"
-            >Proyek</a
+            >Projects</a
           >
           <a href="#contact" class="hover:text-accent transition-colors"
-            >Kontak</a
+            >Contact</a
           >
         </div>
 
-        <!-- Container Tombol (Dark Mode + Hamburger) -->
+        <!-- Button Container (Dark Mode + Hamburger) -->
         <div class="flex items-center gap-4">
-          <!-- Tombol Dark Mode (Sekarang di luar, terlihat di HP & Desktop) -->
+          <!-- Dark Mode Toggle -->
           <button
             id="dark-toggle"
             class="p-2.5 bg-slate-100 dark:bg-slate-800 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-all shadow-sm"
@@ -115,15 +113,14 @@
             ></i>
           </button>
 
-          <!-- Tombol Bahasa -->
+          <!-- Language Toggle -->
           <button
-            onclick="window.location.href = 'en.html'"
+            onclick="window.location.href = 'index.html'"
             class="px-3 py-2.5 bg-slate-100 dark:bg-slate-800 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-700 transition-all shadow-sm text-sm font-semibold text-navy-900 dark:text-slate-200"
           >
-            EN
+            ID
           </button>
-
-          <!-- Tombol Menu HP -->
+          <!-- Mobile Menu Button -->
           <button
             class="md:hidden p-2 text-navy-900 dark:text-white"
             id="mobile-menu-btn"
@@ -133,7 +130,7 @@
         </div>
       </div>
     </nav>
-    <!-- Mobile Menu Overlay (Tambahkan ini) -->
+    <!-- Mobile Menu Overlay -->
     <div
       id="mobile-menu"
       class="fixed inset-0 z-[200] bg-white dark:bg-navy-950 translate-x-full transition-transform duration-300 md:hidden"
@@ -151,7 +148,7 @@
         </div>
         <div class="flex flex-col gap-6 p-8 text-2xl font-bold">
           <a href="#home" class="mobile-link text-navy-900 dark:text-white"
-            >Beranda</a
+            >Home</a
           >
           <a
             href="#experience"
@@ -159,10 +156,10 @@
             >Resume</a
           >
           <a href="#portfolio" class="mobile-link text-navy-900 dark:text-white"
-            >Proyek</a
+            >Projects</a
           >
           <a href="#contact" class="mobile-link text-navy-900 dark:text-white"
-            >Kontak</a
+            >Contact</a
           >
         </div>
       </div>
@@ -184,7 +181,7 @@
                 class="relative inline-flex rounded-full h-2 w-2 bg-accent"
               ></span>
             </span>
-            Tersedia untuk Bekerja
+            Available for Work
           </div>
           <h1
             class="text-5xl lg:text-7xl font-black text-navy-900 dark:text-white leading-[1.1] tracking-tight"
@@ -194,7 +191,7 @@
             >
           </h1>
           <h2 class="text-2xl font-medium text-slate-500">
-            Mahasiswa &
+            Student &
             <span class="text-navy-900 dark:text-white font-bold"
               >Full Stack Web Developer</span
             >
@@ -202,19 +199,19 @@
           <p
             class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-xl"
           >
-            Seorang
+            An experienced
             <span class="font-bold text-navy-900 dark:text-white">
               Full Stack Web Developer
             </span>
-            yang berpengalaman dalam membangun aplikasi web yang responsif dan
-            efisien. Menguasai HTML, CSS, dan JavaScript untuk pengembangan
-            frontend, serta Python dengan framework Django untuk sistem backend.
+            in building responsive and efficient web applications. Proficient in
+            HTML, CSS, and JavaScript for frontend development, as well as
+            Python with the Django framework for backend systems.
           </p>
           <div class="flex flex-wrap gap-4">
             <a
               href="#portfolio"
               class="px-8 py-4 bg-navy-900 dark:bg-accent text-white rounded-2xl font-bold hover:scale-105 transition-all shadow-xl shadow-blue-500/20"
-              >Lihat Portofolio</a
+              >View Portfolio</a
             >
             <a
               href="assets/CV Azfa.pdf"
@@ -222,7 +219,7 @@
               class="px-8 py-4 border border-slate-200 dark:border-slate-800 rounded-2xl font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all flex items-center gap-2"
             >
               <i data-lucide="download" class="w-5 h-5"></i>
-              Unduh CV
+              Download CV
             </a>
           </div>
           <div class="flex items-center gap-6 pt-4 text-slate-400">
@@ -261,29 +258,29 @@
       </div>
     </section>
 
-    <!-- Experience & Education (Sync from CV) -->
+    <!-- Experience & Education -->
     <section id="experience" class="py-24 bg-slate-50 dark:bg-navy-900/50">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-20">
           <!-- Work Experience -->
           <div data-aos="fade-up">
             <h2 class="text-3xl font-black mb-12 flex items-center gap-4">
-              <i data-lucide="briefcase" class="text-accent"></i> Pengalaman
-              Kerja
+              <i data-lucide="briefcase" class="text-accent"></i> Work
+              Experience
             </h2>
             <div class="relative pl-10 space-y-12">
               <div class="timeline-line"></div>
 
-              <!-- Sakata (Updated from CV) -->
+              <!-- Sakata -->
               <div class="relative">
                 <div
                   class="absolute -left-[49px] w-5 h-5 rounded-full bg-accent border-4 border-white dark:border-navy-900"
                 ></div>
                 <span
                   class="text-xs font-bold text-accent uppercase tracking-widest"
-                  >Jun 2025 – Des 2025</span
+                  >Jun 2025 – Dec 2025</span
                 >
-                <h3 class="text-xl font-bold mt-2">Co-Fasilitator</h3>
+                <h3 class="text-xl font-bold mt-2">Co-Facilitator</h3>
                 <p class="text-slate-500 font-medium italic">
                   Sakata Innovation Center, Tasikmalaya
                 </p>
@@ -291,32 +288,32 @@
                   class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 list-disc pl-4"
                 >
                   <li>
-                    Koordinasi multi-stakeholder melibatkan sekolah, guru, dan
-                    otoritas pendidikan.
+                    Multi-stakeholder coordination involving schools, teachers,
+                    and educational authorities.
                   </li>
                   <li>
-                    Mendukung perencanaan dan eksekusi program pendidikan AI dan
-                    coding.
+                    Supported the planning and execution of AI and coding
+                    education programs.
                   </li>
                   <li>
-                    Meningkatkan pemahaman instruksional guru sebesar 85%
-                    melalui mentoring terstruktur.
+                    Improved teachers' instructional understanding by 85%
+                    through structured mentoring.
                   </li>
                   <li>
-                    Mencapai tingkat kelulusan sertifikasi 90% bagi guru
-                    peserta.
+                    Achieved a 90% certification passing rate for participating
+                    teachers.
                   </li>
                 </ul>
               </div>
 
-              <!-- Antarestar (Updated from CV) -->
+              <!-- Antarestar -->
               <div class="relative">
                 <div
                   class="absolute -left-[49px] w-5 h-5 rounded-full bg-slate-300 dark:bg-slate-700 border-4 border-white dark:border-navy-900"
                 ></div>
                 <span
                   class="text-xs font-bold text-slate-400 uppercase tracking-widest"
-                  >Jul 2022 – Okt 2022</span
+                  >Jul 2022 – Oct 2022</span
                 >
                 <h3 class="text-xl font-bold mt-2">Full-Stack Developer</h3>
                 <p class="text-slate-500 font-medium italic">
@@ -326,32 +323,32 @@
                   class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 list-disc pl-4"
                 >
                   <li>
-                    Mengembangkan
+                    Developed a
                     <span class="font-bold text-navy-900 dark:text-white"
                       >Warehouse Management System</span
                     >
-                    menggunakan Django untuk pencatatan inventaris.
+                    using Django for inventory tracking.
                   </li>
                   <li>
-                    Implementasi fitur CRUD untuk manajemen produk, pemasok, dan
-                    data transaksi.
+                    Implemented CRUD features for product, supplier, and
+                    transaction data management.
                   </li>
                   <li>
-                    Membangun website e-commerce perusahaan berbasis WordPress
-                    yang responsif.
+                    Built a responsive WordPress-based company e-commerce
+                    website.
                   </li>
-                  <li>Manajemen dan integrasi basis data menggunakan MySQL.</li>
+                  <li>Managed and integrated databases using MySQL.</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Education & Achievement (New Achievement from CV) -->
+          <!-- Education & Achievement -->
           <div class="space-y-20">
             <div data-aos="fade-up" data-aos-delay="200">
               <h2 class="text-3xl font-black mb-12 flex items-center gap-4">
                 <i data-lucide="graduation-cap" class="text-accent"></i>
-                Pendidikan
+                Education
               </h2>
               <div class="relative pl-10 space-y-12">
                 <div class="timeline-line"></div>
@@ -363,10 +360,12 @@
                   ></div>
                   <span
                     class="text-xs font-bold text-accent uppercase tracking-widest"
-                    >Agu 2023 – Sekarang</span
+                    >Aug 2023 – Present</span
                   >
-                  <h3 class="text-xl font-bold mt-2">Universitas Siliwangi</h3>
-                  <p class="text-slate-500 font-medium">S1 Sistem Informasi</p>
+                  <h3 class="text-xl font-bold mt-2">Siliwangi University</h3>
+                  <p class="text-slate-500 font-medium">
+                    Bachelor of Information Systems
+                  </p>
                   <p
                     class="mt-2 font-bold text-sm text-navy-900 dark:text-white"
                   >
@@ -381,12 +380,10 @@
                   ></div>
                   <span
                     class="text-xs font-bold text-slate-400 uppercase tracking-widest"
-                    >Jul 2020 – Mei 2023</span
+                    >Jul 2020 – May 2023</span
                   >
                   <h3 class="text-xl font-bold mt-2">SMKN 4 Tasikmalaya</h3>
-                  <p class="text-slate-500 font-medium">
-                    Rekayasa Perangkat Lunak (Software Engineering)
-                  </p>
+                  <p class="text-slate-500 font-medium">Software Engineering</p>
                 </div>
               </div>
             </div>
@@ -398,16 +395,16 @@
               class="bg-white dark:bg-navy-950 p-8 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm"
             >
               <h3 class="text-xl font-black mb-6 flex items-center gap-3">
-                <i data-lucide="award" class="text-yellow-500"></i> Prestasi
-                Utama
+                <i data-lucide="award" class="text-yellow-500"></i> Key
+                Achievements
               </h3>
               <div class="space-y-4">
                 <div class="p-4 bg-slate-50 dark:bg-navy-900 rounded-2xl">
                   <h4 class="font-bold text-navy-900 dark:text-white">
-                    Juara 1 Lomba Kompetensi Siswa (LKS)
+                    1st Place in Student Competency Competition (LKS)
                   </h4>
                   <p class="text-xs text-slate-500 uppercase tracking-widest">
-                    Bidang Web Technology • Kota Tasikmalaya • 2022
+                    Web Technology Field • Tasikmalaya City • 2022
                   </p>
                 </div>
               </div>
@@ -421,7 +418,7 @@
     <section class="py-24 px-6 bg-white dark:bg-navy-950">
       <div class="max-w-5xl mx-auto">
         <h2 class="text-3xl font-black text-center mb-16" data-aos="fade-up">
-          Organisasi & <span class="text-accent">Kepanitiaan</span>
+          Organizations & <span class="text-accent">Committees</span>
         </h2>
 
         <div class="relative pl-10 space-y-12">
@@ -436,32 +433,32 @@
             <span
               class="text-xs font-bold text-accent uppercase tracking-widest"
             >
-              Mar 2025 – Des 2025
+              Mar 2025 – Dec 2025
             </span>
 
-            <h3 class="text-xl font-bold mt-2">Anggota Divisi Pendidikan</h3>
+            <h3 class="text-xl font-bold mt-2">Education Division Member</h3>
 
             <p class="text-slate-500 font-medium italic">
-              HMSI Universitas Siliwangi
+              HMSI Siliwangi University
             </p>
 
             <ul
               class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 list-disc pl-4"
             >
               <li>
-                Merencanakan program akademik dan edukasi bagi mahasiswa Sistem
-                Informasi.
+                Planned academic and educational programs for Information
+                Systems students.
               </li>
               <li>
-                Berkontribusi pada pengembangan literasi dan berbagi
-                pengetahuan.
+                Contributed to literacy development and knowledge sharing.
               </li>
               <li>
-                Mendukung dokumentasi, publikasi, dan evaluasi program kerja.
+                Supported documentation, publication, and evaluation of work
+                programs.
               </li>
               <li>
-                Berkolaborasi dalam koordinasi kegiatan dan diskusi strategis
-                divisi.
+                Collaborated in event coordination and strategic division
+                discussions.
               </li>
             </ul>
           </div>
@@ -475,10 +472,12 @@
             <span
               class="text-xs font-bold text-slate-400 uppercase tracking-widest"
             >
-              Okt 2025
+              Oct 2025
             </span>
 
-            <h3 class="text-xl font-bold mt-2">Koordinator Divisi Humas</h3>
+            <h3 class="text-xl font-bold mt-2">
+              Public Relations Division Coordinator
+            </h3>
 
             <p class="text-slate-500 font-medium italic">
               Ready Business (REBIZ)
@@ -488,20 +487,20 @@
               class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 list-disc pl-4"
             >
               <li>
-                Mengoordinasikan kegiatan Divisi Humas untuk mendukung
-                kelancaran acara.
+                Coordinated Public Relations Division activities to support
+                smooth events.
               </li>
               <li>
-                Berkoordinasi dengan pemateri terkait kebutuhan teknis dan
-                administratif kegiatan.
+                Coordinated with speakers regarding technical and administrative
+                event needs.
               </li>
               <li>
-                Mengelola distribusi surat dan komunikasi dengan pihak
-                eksternal.
+                Managed letter distribution and communication with external
+                parties.
               </li>
               <li>
-                Menjadi penghubung antara panitia dan pihak eksternal selama
-                kegiatan.
+                Acted as a liaison between the committee and external parties
+                during the event.
               </li>
             </ul>
           </div>
@@ -518,7 +517,7 @@
               Sep 2025
             </span>
 
-            <h3 class="text-xl font-bold mt-2">Sekretaris</h3>
+            <h3 class="text-xl font-bold mt-2">Secretary</h3>
 
             <p class="text-slate-500 font-medium italic">
               English Based Career Development (EBCD)
@@ -528,14 +527,14 @@
               class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 list-disc pl-4"
             >
               <li>
-                Menyusun surat-menyurat dan dokumen administrasi kegiatan.
+                Drafted correspondence and event administration documents.
               </li>
               <li>
-                Membuat notulen rapat dan mendokumentasikan hasil diskusi.
+                Created meeting minutes and documented discussion results.
               </li>
               <li>
-                Mengelola arsip dokumen serta mendukung koordinasi administrasi
-                panitia.
+                Managed document archives and supported committee administrative
+                coordination.
               </li>
             </ul>
           </div>
@@ -549,45 +548,45 @@
             <span
               class="text-xs font-bold text-slate-400 uppercase tracking-widest"
             >
-              Okt 2024
+              Oct 2024
             </span>
 
             <h3 class="text-xl font-bold mt-2">
-              Staff Publikasi, Dokumentasi, dan Desain
+              Publication, Documentation, and Design Staff
             </h3>
 
             <p class="text-slate-500 font-medium italic">
-              Pengabdian Masyarakat HMSI 2024
+              HMSI Community Service 2024
             </p>
 
             <ul
               class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400 list-disc pl-4"
             >
               <li>
-                Mendokumentasikan seluruh rangkaian kegiatan melalui foto dan
-                video.
+                Documented the entire series of events through photos and
+                videos.
               </li>
               <li>
-                Mendesain pamflet, name tag, dan berbagai kebutuhan publikasi
-                kegiatan.
+                Designed pamphlets, name tags, and various event publication
+                needs.
               </li>
-              <li>Mengelola publikasi kegiatan melalui media sosial HMSI.</li>
+              <li>Managed event publications through HMSI social media.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills (Categorized from CV) -->
+    <!-- Skills -->
     <section id="skills" class="py-24 bg-slate-50 dark:bg-navy-900/50">
       <div class="max-w-7xl mx-auto px-6 text-center">
         <h2 class="text-3xl font-black mb-16" data-aos="fade-up">
-          Skill & <span class="text-accent">Keahlian</span>
+          Technical <span class="text-accent">Skills</span>
         </h2>
         <div
           class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
         >
-          <!-- Repeated for all skills from original -->
+          <!-- Technologies -->
           <div
             class="group p-8 bg-slate-50 rounded-[2rem] text-center border border-transparent hover:border-accent hover:bg-white transition-all"
             data-aos="zoom-in"
@@ -758,7 +757,7 @@
           </div>
         </div>
 
-        <!-- Other Skills from CV -->
+        <!-- Other Skills -->
         <div
           class="mt-12 flex flex-wrap justify-center gap-4"
           data-aos="fade-up"
@@ -791,12 +790,12 @@
       </div>
     </section>
 
-    <!-- Portfolio Section (Interactive Cards) -->
+    <!-- Portfolio Section -->
     <section id="portfolio" class="py-24 px-6 bg-white dark:bg-navy-950">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16" data-aos="fade-up">
           <h2 class="text-4xl font-black mb-4">
-            Proyek <span class="text-accent">Terbaru</span>
+            Latest <span class="text-accent">Projects</span>
           </h2>
           <div class="w-20 h-1.5 bg-accent mx-auto rounded-full"></div>
         </div>
@@ -838,8 +837,8 @@
               </div>
               <h3 class="text-2xl font-bold mb-4">CuanSync</h3>
               <p class="text-sm text-slate-500 leading-relaxed">
-                Platform literasi untuk program "Satu Bulan Satu Buku" yang
-                memungkinkan pengiriman review bacaan mahasiswa.
+                Literacy platform for the "One Month One Book" program allowing
+                students to submit reading reviews.
               </p>
             </div>
           </div>
@@ -880,8 +879,8 @@
               </div>
               <h3 class="text-2xl font-bold mb-4">SABUKU Platform</h3>
               <p class="text-sm text-slate-500 leading-relaxed">
-                Platform literasi untuk program "Satu Bulan Satu Buku" yang
-                memungkinkan pengiriman review bacaan mahasiswa.
+                Literacy platform for the "One Month One Book" program allowing
+                students to submit reading reviews.
               </p>
             </div>
           </div>
@@ -920,10 +919,10 @@
                   >PHP</span
                 >
               </div>
-              <h3 class="text-2xl font-bold mb-4">Web HMSI UNSIL</h3>
+              <h3 class="text-2xl font-bold mb-4">HMSI UNSIL Web</h3>
               <p class="text-sm text-slate-500 leading-relaxed">
-                Website profil Himpunan Mahasiswa Sistem Informasi Universitas
-                Siliwangi sebagai media informasi organisasi.
+                Profile website for the Information Systems Student Association
+                of Siliwangi University as an organizational information media.
               </p>
             </div>
           </div>
@@ -964,8 +963,8 @@
               </div>
               <h3 class="text-2xl font-bold mb-4">SIAKAD TK IT Ibadurrohman</h3>
               <p class="text-sm text-slate-500 leading-relaxed">
-                Sistem Informasi Akademik untuk pengelolaan data siswa, guru,
-                dan administrasi sekolah di TK IT Ibadurrohman.
+                Academic Information System for managing student data, teachers,
+                and school administration at TK IT Ibadurrohman.
               </p>
             </div>
           </div>
@@ -1007,13 +1006,11 @@
                 Warehouse Management System
               </h3>
               <p class="text-sm text-slate-500 leading-relaxed">
-                Website e-commerce untuk produk kemasan plastik thinwall dengan
-                sistem pembayaran COD dan manajemen produk terintegrasi.
+                E-commerce website for thinwall plastic packaging products with
+                a COD payment system and integrated product management.
               </p>
             </div>
           </div>
-
-          <!-- Other projects from original portfolio included here... -->
         </div>
 
         <!-- Toggle Projects -->
@@ -1022,7 +1019,7 @@
             id="toggleProjects"
             class="px-8 py-4 bg-navy-900 text-white font-bold rounded-2xl hover:bg-accent hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 mx-auto"
           >
-            <span id="projectToggleText">Lihat Proyek Lainnya (5)</span>
+            <span id="projectToggleText">View Other Projects (5)</span>
             <span id="projectToggleIcon">
               <i data-lucide="chevron-down" class="w-5 h-5"></i>
             </span>
@@ -1031,7 +1028,7 @@
       </div>
     </section>
 
-    <!-- Professional Development & Certifications (Searchable) -->
+    <!-- Professional Development & Certifications -->
     <section class="py-24 bg-slate-50 dark:bg-navy-900/50 px-6 min-h-screen">
       <div class="max-w-7xl mx-auto">
         <!-- Header & Search -->
@@ -1039,9 +1036,9 @@
           class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8"
         >
           <div data-aos="fade-right">
-            <h2 class="text-4xl font-black mb-4">Sertifikasi</h2>
+            <h2 class="text-4xl font-black mb-4">Certifications</h2>
             <p class="text-slate-500 dark:text-slate-400">
-              Pencapaian profesional dan pengembangan diri terbaru.
+              Recent professional achievements and personal development.
             </p>
           </div>
           <div class="w-full md:w-96 relative" data-aos="fade-left">
@@ -1052,13 +1049,13 @@
             <input
               type="text"
               id="certSearch"
-              placeholder="Cari sertifikat (Python, Web, AI...)"
+              placeholder="Search certificates (Python, Web, AI...)"
               class="w-full pl-12 pr-6 py-4 rounded-2xl bg-white dark:bg-navy-950 border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-accent outline-none text-slate-800 dark:text-white transition-all shadow-sm"
             />
           </div>
         </div>
 
-        <!-- Newest from CV (Highlight) -->
+        <!-- Newest from CV -->
         <div
           class="mb-12 p-8 bg-accent rounded-[2.5rem] text-white flex flex-col md:flex-row items-center gap-8 shadow-xl shadow-accent/20"
           data-aos="fade-up"
@@ -1075,7 +1072,7 @@
           <div>
             <span
               class="text-xs font-black uppercase tracking-widest opacity-80"
-              >Feb 2026 – Sekarang</span
+              >Feb 2026 – Present</span
             >
             <h3 class="text-2xl font-black mt-1">Data Science Learning Path</h3>
             <p class="font-medium opacity-90">
@@ -1102,17 +1099,17 @@
               target="_blank"
               class="px-6 py-3 bg-white text-accent rounded-xl font-bold text-sm text-center block hover:bg-slate-50 transition-colors shadow-sm"
             >
-              Detail Program
+              Program Details
             </a>
           </div>
         </div>
 
-        <!-- Certification Grid (All items in one grid for perfect layout flow) -->
+        <!-- Certification Grid -->
         <div
           id="certContainer"
           class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 transition-all duration-500"
         >
-          <!-- Cert 16 (Visible Default) -->
+          <!-- Cert 16 -->
           <div
             class="cert-card flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
             data-aos="fade-up"
@@ -1142,16 +1139,16 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >29 Mei 2026 | Dicoding</span
+              >May 29, 2026 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Matematika untuk Data Science
+              Mathematics for Data Science
             </h4>
           </div>
 
-          <!-- Cert 15 (Visible Default) -->
+          <!-- Cert 15 -->
           <div
             class="cert-card flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
             data-aos="fade-up"
@@ -1182,16 +1179,16 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >29 April 2026 | Dicoding</span
+              >Apr 29, 2026 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Belajar Dasar AI
+              Learn Basics of AI
             </h4>
           </div>
 
-          <!-- Cert 14 (Visible Default) -->
+          <!-- Cert 14 -->
           <div
             class="cert-card flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
             data-aos="fade-up"
@@ -1222,16 +1219,16 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >28 April 2026 | Dicoding</span
+              >Apr 28, 2026 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Belajar Fundamental Pemrosesan Data
+              Learn Data Processing Fundamentals
             </h4>
           </div>
 
-          <!-- Cert 13 (Visible Default) -->
+          <!-- Cert 13 -->
           <div
             class="cert-card flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
             data-aos="fade-up"
@@ -1262,16 +1259,16 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >18 April 2026 | Dicoding</span
+              >Apr 18, 2026 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Belajar Fundamental Analisis Data
+              Learn Data Analysis Fundamentals
             </h4>
           </div>
 
-          <!-- Cert 12 (Hidden initially via 'hidden' class) -->
+          <!-- Cert 12 -->
           <div
             class="cert-card extra-cert hidden flex flex-col h-full group p-6 bg-white dark:bg-navy-950 rounded-3xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:border-accent/50"
           >
@@ -1296,12 +1293,12 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >27 Maret 2026 | Dicoding</span
+              >Mar 27, 2026 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Belajar Machine Learning untuk Pemula
+              Learn Machine Learning for Beginners
             </h4>
           </div>
 
@@ -1330,12 +1327,12 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >28 Februari 2026 | Dicoding</span
+              >Feb 28, 2026 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Memulai Pemrograman dengan Python
+              Getting Started with Python Programming
             </h4>
           </div>
 
@@ -1364,12 +1361,12 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >19 Februari 2026 | Dicoding</span
+              >Feb 19, 2026 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Belajar Dasar Visualisasi Data
+              Learn Basics of Data Visualization
             </h4>
           </div>
 
@@ -1398,12 +1395,12 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >17 Februari 2026 | Dicoding</span
+              >Feb 17, 2026 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Belajar Dasar Data Science
+              Learn Basics of Data Science
             </h4>
           </div>
 
@@ -1432,12 +1429,12 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >14 Februari 2026 | Dicoding</span
+              >Feb 14, 2026 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Belajar Dasar Git dengan GitHub
+              Learn Basics of Git with GitHub
             </h4>
           </div>
 
@@ -1466,12 +1463,12 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >10 Februari 2026 | Dicoding</span
+              >Feb 10, 2026 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Pengenalan ke Logika Pemrograman (Programming Logic 101)
+              Introduction to Programming Logic (Programming Logic 101)
             </h4>
           </div>
 
@@ -1500,12 +1497,13 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >9 Februari 2026 | Dicoding</span
+              >Feb 9, 2026 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Memulai Dasar Pemrograman untuk Menjadi Pengembang Software
+              Getting Started with Programming Basics to Become a Software
+              Developer
             </h4>
           </div>
 
@@ -1534,7 +1532,7 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >11 Januari 2026 | Dicoding</span
+              >Jan 11, 2026 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
@@ -1568,12 +1566,12 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >18 November 2023 | Dicoding</span
+              >Nov 18, 2023 | Dicoding</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Belajar Dasar Pemrograman Web
+              Learn Basics of Web Programming
             </h4>
           </div>
 
@@ -1602,12 +1600,12 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >20 Desember 2024 | Coding Studio</span
+              >Dec 20, 2024 | Coding Studio</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Fundamental Algoritma
+              Algorithm Fundamentals
             </h4>
           </div>
 
@@ -1636,12 +1634,12 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >25 Desember 2024 | Coding Studio</span
+              >Dec 25, 2024 | Coding Studio</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Fundamental Database MySQL
+              MySQL Database Fundamentals
             </h4>
           </div>
 
@@ -1670,23 +1668,23 @@
             </div>
             <span
               class="cert-date text-[10px] font-black text-accent uppercase tracking-widest mb-2"
-              >25 Desember 2024 | Coding Studio</span
+              >Dec 25, 2024 | Coding Studio</span
             >
             <h4
               class="cert-title font-bold text-sm leading-tight mb-4 flex-grow text-slate-800 dark:text-slate-100"
             >
-              Fundamental Python
+              Python Fundamentals
             </h4>
           </div>
         </div>
 
-        <!-- Toggle Show More / Show Less Button -->
+        <!-- Toggle Button -->
         <div class="mt-16 text-center" id="toggleWrapper">
           <button
             id="toggleCerts"
             class="px-8 py-4 bg-navy-900 text-white font-bold rounded-2xl hover:bg-accent hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 mx-auto"
           >
-            <span id="toggleText">Lihat Seluruh Sertifikat (16)</span>
+            <span id="toggleText">View All Certificates (16)</span>
             <span id="toggleIconContainer">
               <i data-lucide="chevron-down" class="w-5 h-5"></i>
             </span>
@@ -1700,11 +1698,11 @@
       <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
         <div data-aos="fade-right">
           <h2 class="text-4xl font-black mb-8">
-            Hubungi <span class="text-accent">Saya.</span>
+            Contact <span class="text-accent">Me.</span>
           </h2>
           <p class="text-slate-500 dark:text-slate-400 text-lg mb-12">
-            Siap untuk kolaborasi dalam proyek baru atau sekadar menyapa?
-            Hubungi saya melalui media berikut.
+            Ready to collaborate on a new project or just want to say hi?
+            Contact me through the following media.
           </p>
 
           <div class="space-y-6">
@@ -1764,7 +1762,7 @@
                 <p
                   class="text-xs font-bold text-slate-400 uppercase tracking-widest group-hover:text-white/70"
                 >
-                  Lokasi
+                  Location
                 </p>
                 <a
                   href="https://maps.app.goo.gl/Uh3Wt7eaa1KETxWe6"
@@ -1779,7 +1777,7 @@
               <h4
                 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4"
               >
-                Ikuti Saya
+                Follow Me
               </h4>
               <div class="flex gap-4">
                 <a
@@ -1836,14 +1834,14 @@
             <input
               type="text"
               id="name"
-              placeholder="Nama Lengkap"
+              placeholder="Full Name"
               required
               class="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-800 outline-none focus:ring-2 focus:ring-accent transition-all text-slate-800 dark:text-white placeholder-slate-400"
             />
             <input
               type="email"
               id="email"
-              placeholder="Email Anda"
+              placeholder="Your Email"
               class="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-800 outline-none focus:ring-2 focus:ring-accent transition-all text-slate-800 dark:text-white placeholder-slate-400"
             />
           </div>
@@ -1851,14 +1849,14 @@
             type="text"
             id="subject"
             required
-            placeholder="Subjek"
+            placeholder="Subject"
             class="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-800 outline-none focus:ring-2 focus:ring-accent transition-all text-slate-800 dark:text-white placeholder-slate-400"
           />
           <textarea
             id="message"
             rows="6"
             required
-            placeholder="Pesan Anda"
+            placeholder="Your Message"
             class="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-navy-900 border border-slate-200 dark:border-slate-800 outline-none focus:ring-2 focus:ring-accent resize-none transition-all text-slate-800 dark:text-white placeholder-slate-400"
           ></textarea>
 
@@ -1868,7 +1866,7 @@
               type="submit"
               class="w-full sm:w-auto px-8 py-4 bg-[#25D366] text-white font-bold rounded-xl shadow-lg shadow-[#25D366]/30 hover:bg-[#128C7E] hover:-translate-y-1 transition-all flex items-center justify-center gap-3"
             >
-              Kirim via WhatsApp
+              Send via WhatsApp
               <box-icon
                 type="logo"
                 name="whatsapp"
@@ -1891,7 +1889,7 @@
     <!-- Scripts for Logic & Animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module" src="js/main.js"></script>
-    <!-- Proyek -->
+    <!-- Project -->
     <script>
       const toggleProjects = document.getElementById("toggleProjects");
       const hiddenProjects = document.querySelectorAll(".hidden-project");
@@ -1907,8 +1905,8 @@
         });
 
         projectToggleText.textContent = projectExpanded
-          ? "Sembunyikan Proyek"
-          : "Lihat Proyek Lainnya";
+          ? "Hide Project"
+          : "View Other Projects";
 
         document.getElementById("projectToggleIcon").innerHTML = projectExpanded
           ? '<i data-lucide="chevron-up" class="w-5 h-5"></i>'
@@ -1917,7 +1915,8 @@
         lucide.createIcons();
       });
     </script>
-    <!-- Sertifikat -->
+
+    <!-- Certifications -->
     <script>
       const certSearch = document.getElementById("certSearch");
       const toggleBtn = document.getElementById("toggleCerts");
@@ -1942,11 +1941,11 @@
           });
 
           if (isExpanded) {
-            toggleText.textContent = "Sembunyikan Sertifikat";
+            toggleText.textContent = "Hide Certificate";
             toggleIconContainer.innerHTML =
               '<i data-lucide="chevron-up" class="w-5 h-5"></i>';
           } else {
-            toggleText.textContent = "Lihat Seluruh Sertifikat (16)";
+            toggleText.textContent = "View All Certificates (16)";
             toggleIconContainer.innerHTML =
               '<i data-lucide="chevron-down" class="w-5 h-5"></i>';
           }
